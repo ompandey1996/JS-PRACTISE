@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing:border-box;
+        }
+        .navbar{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: orange;
+            color:purple
+        }
+        .nav-links{
+            display:flex;
+        }
+        .link{
+            margin:0px 10px;
+        }
+        .btn-container{
+          display: none;  
+        }
+        @media(max-width:700px){
+           navbar{
+            background-color: red;
+           }
+           .nav-links{
+            display:none;
+           }
+        
+        .show{
+            display:flex;
+           flex-direction: column;
+           justify-content: space-between;
+           align-items: center;
+           position:absolute;
+           background-color: aqua;
+           width:100%;
+           top:7.5%;
+           left:0%
+       
+          
+        }
+        .btn-container{
+            display: block;
+        }
+    }
+    </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">logo</div>
+    <div class="nav-links" id="nav-links">
+        <div class="link">a</div>
+        <div class="link">b</div>
+        <div class="link">c</div>
+        <div class="link">d</div>
+    </div>
+    <div class="btn-container">
+        <button onclick="togglenav()">clickme</button>
+    </div>
+  </div>
+  <script>
+    function togglenav(){
+        let nav=document.getElementById("nav-links");
+         nav.classList.toggle("show");
+
+    }
+  </script>
+</body>
+</html>

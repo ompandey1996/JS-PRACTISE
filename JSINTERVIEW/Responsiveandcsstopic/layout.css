@@ -1,0 +1,18 @@
+img{
+    width:100%;
+    height: auto;
+}
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+
+}
+html{
+    font-size: 14px;
+}
+
+h1{
+    margin-bottom: 0px;
+    font-size: 1.1rem;
+}

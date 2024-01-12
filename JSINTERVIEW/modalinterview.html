@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+       .modal-container{
+            width:70%;
+            display: none;
+             border:1px solid red;
+                border-radius:15px;
+                text-align: center;
+                 margin:10px;
+                  font-size:30px;
+                background:linear-gradient(to right, red,yellow)    
+                    
+       }
+       .modal-content{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+       }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="modalopen()">clickme</button>
+     <div class="modal-container" id="modal">
+      <div class="modal-content">
+           <p>  hi i am john</p>
+           <button onclick="closemod()">delete</button>
+      </div>
+     </div>
+     <script>
+        function modalopen(){
+         let modal=document.getElementById("modal");
+            modal.style.display="block"
+        }
+         function closemod(){
+         
+          let modalclose=document.getElementById("modal");
+            modalclose.style.display="none";
+         }
+     </script>
+</body>
+</html>

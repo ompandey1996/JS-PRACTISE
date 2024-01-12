@@ -1,0 +1,36 @@
+*{
+  margin:0px;
+  padding:0px;
+  box-sizing:border-box;
+}
+.img-container{
+  width:100%;
+  border:1px solid red;
+  text-align:center;
+  position:relative;
+}.slide{
+  display:none;
+}
+.next{
+  position:absolute;
+   top:45%;
+   right:2%;
+}
+.prev{
+  position:absolute;
+  top:45%;
+  left:2%;
+
+}
+.red{
+  background-color:red;
+  height:300px;
+}
+.blue{
+  background-color:blue;
+  height:300px;
+}
+.green{
+  background-color:green;
+  height:300px;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // filter out duplicate//
+     let array=[1,1,3,4,7,3,4]
+      let array2=array.filter((value,index)=>{
+        return array.indexOf(value)===index
+      })   
+      console.log(array2);
+    </script>
+   <script>
+ let obj1={
+            name:'ajay',
+            gender:" male",
+             age:25
+        }
+        let obj2={...obj1,name:"sujay"}
+        console.log(obj1);
+        console.log(obj2);
+   </script>
+    <script>
+     let data="size";
+     let bird={
+      size:"small"
+     }
+       console.log(bird.size);
+       console.log(bird["size"]);
+       console.log(bird[data]);
+       console.log(bird.data);  
+    </script>
+    <script>
+      let no=0;
+      console.log(no++)
+      console.log(++no)
+      console.log(no)
+    </script>
+    <script>
+      // as array1 and arrray2 has different memory location
+      let array1=[];
+      let array12=[];
+      let obj={}
+      let obj12={}
+     console.log(array1==array12);
+     console.log(array1===array12);
+    
+    console.log(obj==obj12);
+    console.log(obj===obj12);
+    </script>
+    <script>
+   console.log(typeof(Nan));
+   let n=[1,2,3,4]
+   let d=[...n];
+   console.log(d)
+    </script>
+    <script>
+     let datas={name:"Anil"} 
+     console.log(delete data.name)//tru
+    </script>
+    <script>
+      let data1=["Anil","Sam","Petter"];
+       const[y]=data1; // op anil 
+    </script>
+     <script>
+    const data11={name:"Ajay",age:25,gender:"male"};
+       const {name,age}=data11;
+       console.log(name,age);
+     </script>
+     <script>
+     let Name="om";
+       function nameS(){
+          console.log(Name);
+          let Name="ajay"
+       }
+     (nameS())// it has block scope deal with only func it will first look in local memory
+     </script>
+
+     <script>
+      console.log(3*3)
+      console.log(3**3)
+      // console.log(3***3)
+     </script>
+     <script>
+      //  reserver keyword let for=100;
+    
+     </script>
+     <script>
+
+      
+     </script>
+</body>
+
+</html> 

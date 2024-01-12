@@ -1,0 +1,83 @@
+<script>
+//  const employees = [
+//     { name: 'David Carlson', age: 30 },
+//     { name: 'John Cena', age: 34 },
+//     { name: 'Mike Sheridan', age: 25 },
+//     { name: 'John Carte', age: 50 }
+//   ];
+
+//   const employee = employees.filter(function (employee) {
+//     return employee.name.indexOf('John')>-1
+//      ;
+
+//   });
+
+//   console.log(employee);
+//   //foreach just loop array elements not return new array
+//   let a=[5,4,5,3,4,2];
+//   a.forEach(function(value){
+//     return value;
+  
+//   })
+//   console.log(a);
+//   let b=[{
+//     name:"ajay",
+//     age:14,
+//     gender:"male"
+//   },
+//   {
+//     name:"sajay",
+//     age:14,
+//     gender:"male"
+//   },
+//       ]
+//   b.forEach(function(value){
+//     return `${value.name}`;
+//   })
+//   console.log(b);
+
+//    Map 
+//   let c=[5,10,20,30];
+
+//   let d= c.map(function(value){
+//     return value;
+//   })
+//   console.log(d);
+//   let g=[
+//   {
+//     name:"ajay",
+//     age:25,
+//     gender:"male"
+//   },
+//   {
+//     name:"sajay",
+//     age:28,
+//     gender:"female"
+//   }
+//   ]
+//   let h=g.map(function(value){
+//   return value.name;
+//   })
+//   console.log(h);
+
+  //reduce
+  let z=[1,2,3,4,5,6,7,8];
+  
+  let sum=z.reduce(function(acc,current){
+    return acc+current
+  })
+  console.log(sum);
+
+  let y=[5,5,5,5];
+  let x=y.reduce(function(acc,curr,index){
+    let total=acc+curr
+    if(index===y.length-1){
+        return total/y.length;
+    }
+    return total;
+  })
+  console.log(x);
+
+
+ 
+</script>

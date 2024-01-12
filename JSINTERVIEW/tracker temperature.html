@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Change on temp value</title>
+  <style>
+    .img-container {
+      
+      width: 50%;
+      height: 10rem;
+      border: 4px solid orange;
+      margin: auto;
+      margin-top: 20px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    input {
+      display: block;
+      width: 50%;
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="text" id="tempcheck" placeholder="enter your temperature" onkeyup="tempchecker()">
+  <h1 id="heading"></h1>
+  <div class="img-container">
+    <img src="summer.jpeg" alt="" id="summer">
+  </div>
+  <!-- JAVASCRIPT -->
+  <script>
+    function tempchecker() {
+      let inputvalue = document.getElementById("tempcheck").value;
+      let temp = inputvalue;
+      console.log(temp)
+
+      let img = document.getElementById("summer");
+      let heading = document.getElementById("heading");
+      if (temp >= 30) {
+        img.src = "summer.jpeg"
+        heading.innerHTML = `SUMMER- ${temp}deg`
+      }
+      else {
+        heading.innerHTML = `WINTER -${temp}deg`
+        img.src = "winter.jpeg"
+      }
+
+    }
+
+  </script>
+</body>
+
+</html>

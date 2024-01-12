@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>respNav</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .ul{
+            display:flex;
+            list-style: none;
+            margin-bottom:0px;
+            justify-content: space-between;
+            align-items: center;
+            background-color: aqua;
+             
+
+        }
+        a{
+            text-decoration: none;
+            color:red;
+        }
+        @media (max-width:680px) {
+            .ul{
+                background-color: blue;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+            }
+            li{
+                border-bottom: 1px solid red;
+                background-color: black;
+                margin-bottom: 1rem;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="nav ">
+        <ul class="ul">
+            <li><a href="">Set</a></li>
+            <li><a href="">Map</a></li>
+            <li><a href="">Gap</a></li>
+        </ul>
+
+    </div>
+</nav>
+</body>
+</html>

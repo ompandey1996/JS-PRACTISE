@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body  style="background-color: black;">
+    <script>
+
+      console.log("hello")
+//   function counttrue(...args) {
+//     let x=[...args];
+//     let count=0;
+//        for(let i=0;i<x.length;i++){
+//               if(x[i]=="true"){
+//                  console.log(count++)
+//               }
+//        }      
+
+//   }      *
+//  counttrue(["true","true","true","false"])  
+
+function counttrue(...args) {
+  let count = 0;
+  for (let i = 0; i < args.length; i++) {
+    if (args[i] == "true") {
+      count++;
+    
+    }
+  }
+  console.log(count);
+}
+
+// Example usage:
+counttrue("true", "false", "true", "true"); // Output: 3
+counttrue("true", "true", "true", "true");   // Output: 4
+
+    </script>
+
+    <script>
+      //  write a function that take string and return a  function thst return string //
+    function redundant(a){
+      
+          return  function  redun(b){
+           
+            return a;
+    }
+  }
+  let data= redundant("apple");
+  let data2=data("bana")
+  console.log(data2)
+    </script>
+    <script>
+    // write a function that takes a letter and no  as argument and calculate perimeter if letter is s calculate square perimeter else circle primetre 
+      // example    perimeter(4,s) console.log 4*7  perimetre (c,4)  6.28 *4
+         
+
+
+      function findperimetre(a,b){
+           if(a=="s"){
+            return 4*b;
+           }
+           else{
+            return 6.28*b;
+           }
+
+      }
+      console.log(findperimetre("s",4));
+      console.log( findperimetre("c",4));
+    </script>
+    <script>
+      // count no of digits //
+            let n=1234;
+            let array= n.toString().split("").length;
+                 console.log(array);   
+    </script>
+    <script>
+     //write a function that concats array//
+         function concat(a){
+          let array=[];
+            let fstpart=a[0].toString();
+            let sndpart=a[1].toString();
+            array.push(fstpart,sndpart);
+             
+              return array;
+         }
+    console.log( concat([[2,3],[3,4,5]]));
+    </script>
+    <script>
+
+function concat(arrays) {
+
+  
+  // Concatenate the first two subarrays using the spread operator.
+  return [...arrays[0], ...arrays[1]];
+}
+
+console.log(concat([[2, 3], [3, 4, 5]])); // Output: [2, 3, 3, 4, 5]
+
+    </script>
+<script>
+  // child function add suffix to parent like india-indian
+     function parent(input){
+      return function (a){
+      
+        return input+ a
+      }
+
+     }
+    let parents=parent ("india")
+    console.log(parents);
+       let child=(parents("ly"))
+       console.log(child)
+</script>
+<script>
+  //   function takes two argument no and length and itr gives multiple of no till length
+     function lengthmultiple(n,len){
+      let m=" ";
+      for (let i=1;i<=len;i++){
+          m+=n*i +" ";
+      }
+        return m;
+     }
+     console.log(lengthmultiple(7,5));
+     
+</script>
+<script>
+  //TAKING OBJECT AMD GIVING KEY VALUE IN SEPARATE ARRAYS
+       function arraycreater
+       (param){
+        let key=[];
+        let value=[];
+        for (i in param){
+           console.log(i);
+            
+        }
+         key.push(i);
+         value.push(param[i])
+         console.log(key);
+         console.log(value);
+       }
+       arraycreater({name:"om",age:27})//   [name,age][om,27]
+     
+</script>
+<script>
+ // A repdigit is a positive number composed out of the same digit. Create a function that takes an integer and returns whether it's a repdigit or not if repdigit or 0 return true and if - value then return false.
+     function repdig(n){
+        if(n==0){
+          console.log("true")
+        }
+       
+        if(n==-n){
+          console.log("false")
+        }
+        
+       let original=n.toString().split("")       
+       let rev=n.toString().split("").reverse();
+          if(JSON.stringify(original)==JSON.stringify(rev)){
+            console.log("true")
+          }      
+          else{
+            console.log("false")
+          }
+        }
+        
+     repdig(77);
+</script>
+<script>
+
+  //sorting an array //
+  let newarr=[[3,4],1,2,[5,6]]  //op 1,2,3,4,5,6
+    let mergearr=newarr.flat().sort(function(a,b){
+      return a-b;
+    })
+   
+   console.log(mergearr)
+
+  //  remove trailing and leading zero   trailimg means before decimal and leading means after decimal
+     // op 000.3 // op-3 3.000 op-3 00.3.14000 o/p 3.14;
+     function removetrailleaddecimal(n) {
+  // Remove leading zeros before and after the decimal point
+  n = n.replace(/^0+|0+$/g, '');
+  n= n.replaceAll(".","")
+  return n;
+}    
+const output = removetrailleaddecimal('00.3314.0000'
+);
+console.log(output);
+</script>
+<script>
+   //    two arrays are equal and have identical values the return true./
+            // it will check identical array//
+        function   identicalarray(a,b){
+           if(a.length==b.length){
+           let arr1=JSON.stringify(a)
+           let arr2=JSON.stringify(b);
+             if(arr1==arr2){
+              console.log("true")
+             }
+             else{
+              console.log("arr1,arr2 are not identical")
+             }
+           }
+           else{
+            console.log("array not identical")
+           }
+
+        }
+        identicalarray([4,3,],[5,2])
+        identicalarray([3,3,],[3,3])
+
+</script>
+<script>
+  // calculate discounted price//
+      function calculateDiscount(price,dis){
+       let disperc=dis/100;
+          let disamount=  price*disperc;
+          let newprice= price-disamount;
+             console.log(newprice);
+      }
+        calculateDiscount(1000,15)
+</script>
+<script>
+  //    convert 2d array into 1d array without useing flat()//
+    let arr=[[2,3,4],[4,5,6],7,8]
+    // let arr2=  arr.flat();
+      //  console.log(arr2)  
+           
+         let newarr2=arr.toString().replaceAll("[]","").split();
+           console.log(newarr2)
+    
+</script>
+<script>
+// Write a function that returns an anonymous function, which adds n to its input
+
+// Examples
+// adds1 = addsNum(1)
+
+// adds1(3) ➞ 4
+// adds1(5.7) ➞ 6.7//
+     function outer(x) {
+      return function(n){
+        return n+x;
+      }
+      
+     }
+    let dat32=outer(5);
+     let dat2=dat32(5);
+         console.log(dat2)
+</script>
+
+<script>
+
+
+  ///find second largest no 
+    let arrays=[4,8,7,,78,74,3];
+  let arrays2= arrays.sort(function(a,b){
+    return b-a;
+  })
+    console.log(arrays2);
+    console.log(arrays2[1]);
+</script>
+<script>
+  //basic calculator //
+   function calculator(a,b,c){
+    if(b=="*"){
+      return a*c;
+    }
+    if(b=="+"){
+      return a + c;
+    }
+    if(b=="/"){
+      return a/b;
+    }
+    if(b=="-"){
+      return (a-c)
+    }
+
+   }
+let x=calculator(7,"*",5);
+console.log(x);
+
+</script>
+<script>
+    // % of land country with proportion to total area
+    function   calculatearea(country,area){
+        let worldarea="100"
+        if(country=="india"){
+          let indiashare= area/worldarea *100;
+          return indiashare;
+        }
+    }
+  console.log(calculatearea("india","20"))
+</script>
+<script>
+     function  squareeverydigit(n){
+          let data =n.toString();
+          let square ="";
+          for(let i=0;i<data.length;i++){
+            square+=data[i]*data[i]
+
+          }
+          return Number(square);
+
+     }
+   console.log(squareeverydigit(991)) //output 141
+</script>
+</body>
+</html>

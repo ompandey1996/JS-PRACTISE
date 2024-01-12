@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input{
+        border:2px solid red;
+           background-color: aqua;
+          color:white;
+    }
+          .progress{  
+               margin-top:2%;
+            width:40%;
+            height:20px;
+               border:1px solid red;
+                  
+                border-radius:15px;
+          }
+          .progressbar{
+            height:20px;
+          }
+          
+  </style>
+</head>
+<body  style="background-color: black;">
+  <input type="text" placeholder="name" id="name"  onkeyup="myprogress()">
+     <div  class="progress">
+        <div class="progressbar" id="progressbar">
+
+        </div>
+     </div>
+     <script>
+        function myprogress(){
+        let input =  document.getElementById("name").value;
+           console.log(input)
+      
+         let length=input.length;
+         if(length==""){
+          alert("please fill input")
+         }    
+         if(length>1){
+             var progressbar=document.getElementById("progressbar").style.backgroundColor="red"  
+             var progressbar=document.getElementById("progressbar").style.width="50%"
+           
+         } 
+         if(length>3){
+             var progressbar=document.getElementById("progressbar").style.backgroundColor="green"  
+             var progressbar=document.getElementById("progressbar").style.width="80%"
+           
+         }  
+         if(length>3){
+             var progressbar=document.getElementById("progressbar").style.backgroundColor="orange"  
+             var progressbar=document.getElementById("progressbar").style.width="100%"
+           
+         }
+        
+        
+        }
+     </script>
+ <script>
+    
+  // recursion when function call itself//
+  // print 1 to 10
+  function countupto(n){
+    if(n<=10){
+      console.log(n)
+      countupto(n+1)
+    }
+   
+  }
+  countupto(1)
+  //print 10 t0 1   useing recursion 
+
+      function countreverse(n){
+        if(n <=0){
+          console.log("exit")
+        }
+        else{
+          console.log(n);
+          countreverse(n-1)
+        }
+
+      } 
+      countreverse(10)
+ </script>     
+ <script>
+  // Add sum of 50 100 50
+let arr=[{apple:50},{banana:100},{ginger:50}]
+let sum=0;
+for (let elem of arr){
+     let obj =elem;
+   
+        for (let i in  obj){
+            parseFloat(obj[i]);
+          // console.log(value)
+          sum+= parseFloat(obj[i]);;
+            console.log(sum)
+        }
+}
+
+ </script>
+
+<script>
+
+  // factorial 
+    // 3!=3*2*1=6;
+    // function to find factorial
+    function factorial(n) {
+  let result = 1;
+  for (let i = 1; i <= n; i++) { // Change the loop condition to include n
+    result *= i;
+    console.log(result);
+  }
+}
+factorial(5);0
+                                                        
+      
+</script>
+    <script>
+      // remove duplicate//
+           let array=[1,1,2,3,4,5,4,5,3];
+              let newarray=[...new Set(array)];
+                 console.log(newarray);
+    </script> 
+
+    <script>
+         
+    </script>  
+</body>
+
+</html>                                   

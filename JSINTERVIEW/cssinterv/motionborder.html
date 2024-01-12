@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .borderstyle {
+    border: 3px solid red;
+    border-top: 3px solid green;
+    border-left: 3px solid purple;
+    border-right: 3px solid chocolate;
+    border-bottom: 3px solid fuchsia;
+    animation-name: circleborder;
+    /* Corrected the typo here */
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+  }
+
+  @keyframes circleborder {
+
+    /* Corrected the typo here */
+    0% {
+      border-top: 4px solid fuchsia;
+      border-left: 4px solid chocolate;
+      border-right: 4px solid purple;
+      border-bottom: 4px solid green;
+      box-shadow: 2px 2px 15px orange;
+    }
+
+    25% {
+      border-top: 4px solid purple;
+      border-left: 4px solid green;
+      border-right: 4px solid purple;
+      border-bottom: 4px solid red;
+      box-shadow: 2px 2px 15px purple;
+
+    }
+
+    100% {
+      border-top: 4px solid green;
+      border-left: 4px solid purple;
+      border-right: 4px solid chocolate;
+      border-bottom: 4px solid fuchsia;
+    }
+  }
+</style>
+
+<body>
+  <div class="borderstyle">
+    <h1> mera hojayenga hoga tum se</h1>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion Example</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .accordion-item {
+            border: 1px solid red;
+            margin-bottom: 10px;
+        }
+
+        .accordion-header {
+            background-color: #f2f2f2;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+            Item 1
+        </div>
+        <div class="accordion-content">
+            Content for Item 1
+        </div>
+    </div>
+    <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+            Item 2
+        </div>
+        <div class="accordion-content">
+            Content for Item 2
+        </div>
+    </div>
+
+    <script>
+        // JavaScript function to toggle the accordion
+        function toggleAccordion(header) {
+            const content = header.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accordian</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .accordian {
+            width: 70%;
+            margin: auto;
+            margin-top: 10px;
+        }
+
+        .heading {
+            text-align: center;
+            background-color: orangered;
+        }
+
+        .accord-content {
+            background-color: black;
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="accordian">
+        <div class="heading" onclick="openaccord(this)">
+            <h1>Hello</h1>
+        </div>
+        <div class="accord-content">
+            <p>Lorem ipsum dolor sit.</p>
+            <p>Lorem ipsum dolor sit.</p>
+            <p>Lorem ipsum dolor sit.</p>
+        </div>
+
+    </div>
+    <script>
+        function openaccord(heading) {
+            let content = heading.nextElementSibling;
+            if (content.style.display === "none") {
+                content.style.display = "block"
+            }
+            else {
+                content.style.display = "none"
+            }
+
+        }
+    </script>
+</body>
+
+</html>

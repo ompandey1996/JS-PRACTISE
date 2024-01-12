@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex</title>
+
+</head>
+<body>
+    <!-- sites to check regex  Regex R-->
+    <script>
+        // validate phn no starting with 89 and should be of 10 digits 
+      let phnno="8210197015";
+      let regex=/[8][0-9]{9}/;
+         let test=phnno.match(regex);
+          console.log(test);
+    </script>
+    <script>
+   // first character uppercase then lowercase and then a digit and then alphabets//
+   let alpha="Asgdhw9kjskd";
+   let regex1=/[A-Z]{1}[a-z]+[0-9][a-z]+/;
+    let test1 =alpha.match(regex1) ;
+     console.log(test1);
+    </script>
+    <script>
+        //validate email//;
+        let email="ompandey092@gmail.com";
+        let regex2=/[a-zA-Z]+[0-9]+[@][a-z]+[\.][a-z]{2,3}/;
+          let test3=email.match(regex2);
+          console.log(test3);
+    
+
+    </script>
+</body>
+
+</html>

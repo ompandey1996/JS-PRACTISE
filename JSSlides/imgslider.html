@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMAGE-SLIDER</title>
+</head>
+<style>
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  .img-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .slide {
+    width: 100%;
+    display: none;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .btn {
+    position: absolute;
+    top: 45%;
+  }
+
+  .prev {
+    position: absolute;
+    left: 2%;
+  }
+
+  .next {
+    position: absolute;
+    right: 2%;
+  }
+</style>
+
+<body>
+  <div class="img-container">
+    <div class="slide">
+      <img src="./Images/banner1.jpg" alt="">
+      <h1>Caption1</h1>
+    </div>
+    <div class="slide">
+      <img src="./Images/banner2.jpg" alt="">
+      <h1>Caption2</h1>
+    </div>
+    <div class="slide">
+      <img src="./Images/banner3.jpg" alt="">
+      <h1>Caption3</h1>
+    </div>
+    <button class="btn prev" onclick="controller(-1)">Prev</button>
+    <button class="btn next" onclick="controller(1)">Next</button>
+  </div>
+  <script src="imgslider.js"></script>
+</body>
+
+</html>

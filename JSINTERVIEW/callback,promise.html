@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // callback hell
+        //  console.log("callback hell")
+        //  setTimeout(() => {
+        //  console.log("go to  bazar")
+        //      setTimeout(() => {
+        //         console.log("  buy sabji")
+        //     }, 1000)
+        //     setTimeout(() => {
+        //         console.log("  rturn from bazar")
+        //     }, 2000)
+        // }, 3000)
+    </script>
+    <script>
+        //promises//
+        // console.log("promises")
+        function gobazar() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("go to bazar")
+                }, 1000)
+            })
+
+        }
+        function buysabji() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("buy sabji")
+                }, 2000);
+            })
+
+        }
+        function returnbazar() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("return sabji")
+                }, 3000);
+
+            })
+
+        }
+        gobazar().then((value) => {
+            console.log(value)
+        })
+        buysabji().then((value) => {
+            console.log(value)
+        })
+        returnbazar().then((value) => {
+            console.log(value)
+        })
+
+    </script>
+    <script>
+        ///    
+        async function fetchdata() {
+
+            setTimeout(async () => {
+                let data = await ({ name: "john", age: 15 })
+                console.log(data)
+            }, 2000)
+
+        }
+        fetchdata();
+
+    </script>
+
+
+</body>
+
+</html>

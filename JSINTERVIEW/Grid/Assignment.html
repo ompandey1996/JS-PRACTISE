@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Styles for the menu container */
+    .menu-container {
+      position: relative;
+      display: inline-block;
+      border: 1px solid red;
+    }
+
+    /* Styles for the menu button */
+    .menu-button {
+      cursor: pointer;
+    }
+
+    /* Styles for the hidden menu */
+    .hidden-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #f9f9f9;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      list-style: none;
+      padding: 10px;
+      margin: 0;
+    }
+
+    /* Show the menu when the container is hovered */
+    .menu-container:hover .hidden-menu {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Menu container -->
+  <div class="menu-container">
+
+    <!-- Menu button -->
+    <div class="menu-button">Hover me</div>
+
+    <!-- Hidden menu -->
+    <ul class="hidden-menu">
+      <li><a href="#">Menu Item 1</a></li>
+      <li><a href="#">Menu Item 2</a></li>
+      <li><a href="#">Menu Item 3</a></li>
+    </ul>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+<body>
+    <!-- SLICE       INCLUDES    INDEXOF
+    SUBSTRING   CHARAT      LASTINDEXOF
+    SUBSTR      STARTS WITH  ENDS WITH
+    CONCAT  TOUPPERCASE  LOWERCASE   
+    SPLIT   REPLACE REPLACEALL TRIM   -->
+
+ <script>
+     NUMBER BOOLEAN,STRING IS PRIMITIVE TYPE OF DATA AS THIS DONT HAVE PROPERTIES OR METHODS
+     NOW THE QUESTION ARISES HOW WE CALLING METHOD ON THIS PRIMTIVE DATATYPE
+      THIS IS BECAUSE JS WRAPPING THIS UNDER OBJECT
+
+    let  a ='Ram is going to school';
+      
+       Calling of slice() METHOD.
+     let  b = a.slice(0, 5);
+      console.log(b);
+      let c= a.slice(-18)
+      console.log(c)
+      let d=a.slice(3,-3) 
+      console.log(d)
+       if we start from negative it will not work
+      let e=a.slice(-1,4);
+       THIS WILL NOT WORK
+      console.log(e)
+
+      let g=a.substring(15,4);
+      this will work even if starting index  is greater this is only difference  between substring and slice
+      console.log(g)
+      let h=a.slice(15,4);
+      console.log(h);
+      let i=a.substring(-8);
+      console.log(i)
+
+      substr contains two argument first tell from where to start second the length to be extracted;
+      in substr dont take negative value
+      let j=a.substr(3,5);
+      console.log(j);
+      let k=a.substr(3,-2);
+      console.log(k)
+      
+       other methods
+      let l="abcdefghi";
+      let m="abcdefghijk";
+        if(l==m){
+        console.log(true)
+        }
+        else{
+            console.log(false)
+        }
+
+   let n=" ads?qwer?were?";
+   let o=n.split("?");
+    console.log(o);
+    let p=" the quick brown fox jump";
+    let q= p.includes("quick");
+    console.log(q)
+     let r=p.indexOf(q);
+     console.log(r);
+      let s=p.startsWith("t")
+      console.log(s)
+
+     
+     
+        
+     
+ </script>   
+</body>
+</html>

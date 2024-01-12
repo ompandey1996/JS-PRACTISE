@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>JS Coding </title>
+</head>
+
+<body>
+   <script>
+      //     // find out missing array element//
+
+      function test(nums) {
+         for (let n = 1; n <= nums.length + 1; n++) {
+            console.log(nums[n])
+            if (nums.indexOf(n) === -1)
+               return n;
+         }
+      }
+      nums = [1, 2, 3, 5, 6, 7]
+      console.log("nums = " + nums)
+      console.log("Missing number of the said array: " + test(nums));
+      nums = [2, 3, 4, 5]
+      console.log("nums= " + nums)
+      console.log("Missing number of the said array: " + test(nums));
+   </script>
+   <script>
+      // no should be divisible by 3,5,and return sum 
+      let a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      let sum = 0;
+      for (i = 0; i <= a.length - 1; i++) {
+         if (a[i] % 3 === 0 || a[i] % 5 === 0) {
+
+            sum += a[i];
+            console.log(sum)
+
+         }
+      }
+   </script>
+   <script>
+      //if 4 sum of 4//
+      function sumkaro(n) {
+         let sum = "";
+         for (i = 1; i < n - 1; i++) {
+            sum = sum + i;
+
+         }
+         return sum;
+      }
+      console.log(sumkaro(4));
+
+   </script>
+   <script>
+      // swapping of two digit no after swapping if original is bigger then swap return true;
+      function swap(a) {
+         let j = a.join("")
+         let x = a.reverse(" ").join(" ");
+         if (j < x) {
+            return true;
+         }
+         else {
+            return false;
+
+         }
+      }
+      console.log(swap([3, 4]))
+   </script>
+   <script>
+      //detect lower case which is in between uppercase;
+      //CCcTSFaGSt-o/p -t;
+      function detect(n) {
+         return n.replace(/[A-Z]/g, " ");
+
+      }
+      console.log(detect("Acat"))
+   </script>
+   <script>
+      // find avg if empty return 0;
+      function avgsum(a) {
+         let length = a.length;
+         let sum = 0;
+         let avg = "";
+         if (length == " ") {
+            return avg = 0;
+         }
+         else {
+            for (i = 0; i < length; i++) {
+
+               sum += a[i]
+            }
+
+            return avg = sum / length;
+         }
+      }
+      console.log(avgsum([]));
+   </script>
+   <script>
+      //return drink objects in sorted form//
+
+      let drink = [
+         { name: "lemonade", price: 50 },
+         { name: "lime", price: 10 }
+      ]
+      let sorted = drink.sort(function (a, b) {
+         a.price - b.price;
+      })
+      console.log(sorted);
+   </script>
+   <script>
+      //compare 2 arrays//
+      let array1 = [1, 2, 3, 4, 5];
+      let array2 = [1, 2, 3, 2, 3,];
+      if (array2 < array1) {
+         console.log(true)
+
+      }
+      else {
+         console.log(false)
+      }
+   </script>
+   <script>
+      // take two strings as fun arg and return the no of occurence of 1st arg in second string
+
+      function count(a, b) {
+         let count = 0;
+         for (i = 0; i < b.length; i++) {
+            if (b[i] === a) {
+               count++
+            }
+
+         }
+         return count++
+      }
+      console.log(count("t", "tatatatakai"))
+   </script>
+   <script>
+      //return a no into two halfs example 6  0/p [3,3] 9= [4,5]
+      function twohalves(S) {
+         let array = [];
+         let n = S / 2;
+
+         let floor = Math.floor(n);
+
+         let ceil = Math.ceil(n);
+
+         array.push(floor, ceil);
+
+         return array;
+      }
+      console.log(twohalves(11));
+   </script>
+   <script>
+      // sum of its cubes//
+      function cube(a) {
+         let sum = 0;
+
+         for (i = 0; i < a.length; i++) {
+            sum += a[i]
+         }
+         let cubearr = Math.pow(sum, 3)
+         return cubearr;
+      }
+      console.log(cube([1, 3, 1]));
+   </script>
+   <script>
+// find highestno
+function highestno(a){
+   let split= a.toString().split("")
+   let max=Math.max(...split);
+   return max;
+
+}
+console.log(highestno(123))
+    
+   </script>
+   <script>
+      //return even no present at  event indexes
+      // [1,2,3,4,5,5,6,8];   o/p-6
+      function geteven(ev) {
+         let evenno = [];
+         for (i = 0; i < ev.length; i++) {
+            if (i % 2 === 0 && ev[i] % 2 === 0) {
+               evenno.push(ev[i])
+            }
+         }
+         return evenno;
+      }
+      console.log(geteven([1, 2, 3, 4, 5, 5, 6, 8]));   
+   </script>
+   <script>
+      //REPEAT EACH CHARACTER TWO TIMES //
+      //papa =ppaappaa
+      
+      console.log(repeat("papapa"))
+   </script>
+   <script>
+      // filter out string from arrays//
+      let array = [1, 2, 3, "A", "b", "c"];
+      let op = array.toString().replace(/[a-z,A-Z]/g, " ")
+      console.log(op);
+
+   </script>
+<script>
+   //count no of vowels//
+   
+     
+const vowels = ["a", "e", "i", "o", "u"]
+
+function countVowel(str) {
+  
+    let count = 0;
+
+    // loop through string to test if each character is a vowel
+    for (let letter of str.toLowerCase()) {
+        if (vowels.includes(letter)) {
+            count++;
+        }
+    }
+
+    // return number of vowels
+    return count
+}
+
+// take input
+
+
+const result = countVowel("aeiougfdfrs");
+
+console.log(result);  
+</script>
+<script>
+   // given a no return sum of products of the no between 1 to 10:exp 1*10+...1*1=55;
+     function productofsum(n){
+      let sum=0;
+        for(i=1;i<=10;i++){
+          sum+=n*i
+        }
+        return sum;
+
+     } 
+   console.log  (productofsum(10))
+</script>
+<script>
+   // sort by length ex apple,baba,cat o/p cat baba apple;
+    function sortbylength(a){
+      let sort=a.sort(function(a,b){
+         return a.length-b.length;
+      })
+      return sort;
+    }
+   console.log(sortbylength(["aaa","bb","c"]))
+</script>
+<script>
+   // find vowels
+   let n="ajdjxhgysygwrdcsfdaeio"
+   let countVo=n.match(/[aeiou]/gi).length;
+      console.log(countVo);
+</script>
+<script>
+   //check if it is title string//
+   let title="The Quick Brown";
+   let word= title.split(" ");
+     for(i=0;i<word.length;i++){
+      if(word[i].charAt(0)===word[i].charAt(0).toUpperCase()){
+         console.log(true)
+      }
+      else{
+         console.log(false)
+      }
+      
+     }
+   
+</script>
+<script>
+   //writa a function that takes array and return phone no;[9832178156]=(983)-217-8156;
+   
+const createNumber = (phnno) => {
+   let res = '';
+   arr = phnno.map(String);
+   res += `(${arr[0]+arr[1]+arr[2]}) `;
+   res += `${arr[3] + arr[4] + arr[5]}-`;
+   res += arr[6] + arr[7] + arr[8] + arr[9];
+   return res;
+};
+console.log(createNumber([9, 8, 7, 6, 5, 4, 3, 2, 1, 0]));  
+
+</script>
+<script>
+   // if reverseno and no are equal then return true;
+</script>
+<script>
+   // filter first vowel given in a string;
+   function  findvowel(string){
+      let regex=/[aeiou]/ig;
+     return vowel_first =string.indexOf(string.indexOf(regex))
+   }
+   console.log(findvowel("lund"))
+</script>
+<script>
+   // A no is symeterical or not//
+      //  rev of 121 =121  then symeterical
+        let digit=125;
+        let reversedigit=digit.toString().split("").reverse(" ").join("");
+      if(digit==reversedigit){
+         console.log(true)
+      }
+      else{
+         console.log(false)
+      }  
+</script>
+<script>
+   // convert uppercase into lower and viceversa
+     /// appLE=APPle
+      function caseconverter(s){
+         let caseconvert="";
+         for(i=0;i<s.length;i++){
+         if((s[i]==s[i].toUpperCase())){
+        let newcase= s[i].toLowerCase()
+         caseconvert+=newcase;
+         }
+         else{
+            s[i].toLowerCase();
+          caseconvert+=s[i].toUpperCase()
+         }
+      }
+      return caseconvert
+   }
+    console.log(caseconverter("App"))
+    // find first vowel//
+    function string(t){
+     return t.indexOf(/[aeiou]/ig)
+    }
+  console.log(string("apple"));
+  // add max five;
+</script>
+<script>
+// valid zipcode   5 digitd,nospaces,only number  /
+ // string includes white space or not
+ 
+</script>
+<script>
+   //array is omniarray means in every array 
+   let arrayomni =[[3,5],[3,4],[4,3],[3]];
+      function omnielem(n){
+       
+        for( let omnidig of arrayomni){
+           if(omnidig.includes(n)){
+       return true;
+        }
+        else{
+         return false;
+        }
+      }
+   }
+    console.log(  omnielem(3));
+</script>
+<script>
+//    function convertbinary(name){
+//       let collecttext=""; 
+//     let fstregex=/[a-m]/ig .toString();
+   
+//     let secregex=/[n-z]/ig.toString();
+//      for(let i=0;i<name.length;i++){
+//        if(name[i].includes(fstregex)){
+//          name[i]===0;
+//       collecttext+=name[i];
+//        }
+//        if(name[i].includes(secregex)){
+//          name[i]===1;
+//          collecttext+=name[i];
+//        }
+//       return collecttext;
+//      }
+      
+//    }
+//  console.log(convertbinary("ramesh"))
+</script>
+<script>
+//left most digit//
+function leftmostdigit(n){
+   let noarray=[];
+ let no=n.replace(/[a-z]/g,"")
+  for(let i=0;i<no.length;i++){
+   noarray.push(no[i])  
+  }
+  return noarray[0]
+}
+console.log(leftmostdigit("ra1shw24")) //op 1
+</script>
+<script>
+   function getsec(min){
+    let time=" ";
+   let m=min.toString().split(":")
+      for(let i=0;i<m.length;i++){
+        let n1=Number(m[0]*60);
+        let n2=Number(m[1]);
+        time=n1+n2;
+      }
+   return time;
+   }
+   console.log(getsec("1:50"))
+</script>
+<script>
+// find subarray//
+ function subarray(a,b){
+   for(let i=0; i<a.length;i++){
+   for(let j=0;j<b.length;j++){
+  if(a.includes(b[j])){ 
+   return true ;
+}
+else{
+   return false;
+}
+   }
+ }
+}
+ console.log(subarray([1,2,3,4],[7,8]))
+</script>
+<script>
+// no to array// array to no;
+let newno=123;
+ let formedarray= newno.toString( ).split(" ")
+    console.log(formedarray)
+      let generateno=Number(formedarray);
+      console.log(generateno);
+</script>
+<script>
+// summing a slice([5,5,7,6],3) o/p-17//
+   function slicesum(a,b){
+      let extractsum=0;
+       let slice=a.slice(0,b);
+       for(let i=0;i<=slice.length-1;i++){
+          extractsum+=slice[i]
+       }
+       return extractsum;
+   }
+   console.log(slicesum([1,2,3,4],3))
+</script>
+<script>
+   // digits after decimal places12.21 0/p-2
+   let dec=12.234;
+     let stringdec=dec.toString().split(".")[1].length;
+     console.log(stringdec);
+</script>
+<script>
+   // count no of 1 in 2d array//
+   function count1(a,b){
+      let sum1=0;
+       let count1_a=0;
+       let count2_b=0;
+        for(let i=0;i<a.length;i++){
+         if(a[i]===1){
+            count1_a++
+         }
+        }
+        for(let j=0;j<b.length; j++){
+         if(b[j]===1){
+            count2_b++
+         }
+        }
+        return sum1+=count1_a + count2_b;
+   }
+console.log(count1([1,1,1],[1,1,1]))
+</script>
+<script>
+
+
+</script>
+<script>
+  
+  function newcard(a){
+   let secpart=a.toString().slice(5,9);
+   let star="*"
+   return `${star.repeat(5)}${secpart}`
+  }
+ console.log( newcard(548789145));
+
+</script>
+</body>
+</html>

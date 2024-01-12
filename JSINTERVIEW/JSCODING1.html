@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //return the first array//
+    
+    function farray(...args){
+     return args[0]
+    }
+     let x=farray(5,10,20);
+     console.log(x);
+
+</script>
+<script>
+    //string returning with something//
+    function string(a){
+        return `something ${a}`
+    }
+   let y=string("done");
+   console.log(y)
+
+</script>
+<script>
+    let a=Math.pow(2,3);
+    console.log(a)
+</script>
+<script>
+    //return true false when no greater then 1;
+    function trueifnogreaterthen0(n){
+      
+      return Boolean(n)
+    }
+let res =trueifnogreaterthen0(1)
+console.log(res);
+</script>
+<script>
+    // no return true is sum less then 100 and false if 100;
+      function sum2no(a,b){
+           let add=a+b;
+           if(add<=100){
+            return Boolean(1)
+           }
+           else{
+            return Boolean(0)
+           }
+           return add;
+      }
+      let data=sum2no(115,10)
+      console.log(data);
+
+</script>
+<script>
+    // count no of legs of cow pig men
+      function countlegs(c,p,m){
+        return c*4+p*4+m*2;
+      }
+       let countleg= countlegs(2,2,2)
+       console.log(countleg);
+</script>
+<script>
+    //infinite loop//
+        function addinarray(){
+            let array=[];
+          for(i=1;i<=5;i++){
+            array.push(i);
+          }
+          return array;
+        }
+        let newarray=addinarray();
+         console.log(newarray);
+</script>
+<script>
+    // special message to someone//
+       function greet(users){
+        if(users==="mubasir"){
+            return "hello my love"
+        }
+        else{
+            return `Good morning ${users}`
+        }
+        return users;
+       }
+       let wish=greet("ramesh");
+       console.log(wish);
+       
+</script>
+<script>
+    //return true if one is greater then 10 or sum//
+    function  greaterthen10(a,b){
+        let x=a+b;
+        if(a>10 || b>10 || x ===10){
+        
+        return Boolean(1)
+        }
+        else{
+            return Boolean(0)
+        }
+    }
+      let accurateno=greaterthen10(1
+      ,5);
+        console.log(accurateno);
+</script>
+<script>
+    //largest no in an array//
+    var arr = [3, 6, 2, 56, 32, 5, 89, 32];
+var largest = arr[0];
+
+for (var i = 0; i < arr.length; i++) {
+
+    if (largest < arr[i] ) {
+        largest = arr[i];
+    }
+}
+console.log(largest);
+     
+</script>
+<script>
+    let ar=[11,12,13,4,5,16,17,18];
+      let smallest=ar[0]
+       for(let i=0;i<ar.length ;i++){
+        if(smallest>ar[i]){
+            smallest=ar[i]
+        }
+       }
+       console.log(smallest)
+</script>
+<script>
+    //return no//
+    let stringfy="5";
+    let convertstring=Number(stringfy);
+       console.log(typeof(convertstring))
+
+</script>
+<script>
+    //evenly qutient then return true and false//
+      function evenqutient(a,b){
+        let qutient=a/b;
+        if(qutient%2==0){
+            return Boolean(1)
+        }
+        else{
+            return Boolean(0) 
+        }
+        return qutient
+      }
+      let iseven=evenqutient(3,3);
+       console.log(iseven);
+</script>
+<script>
+    //reverse an array;
+    let revarr=[1,2,3,4,5,6,7];
+    for(let i=6;i >=0;i--){
+     console.log(revarr[i]);
+    }
+    </script>
+    <script>   
+     //remove first character//
+       function stringslice(z){
+        return z.slice(1)
+       }
+      let extract= stringslice("abcdefgh");
+      console.log(extract);
+    </script>
+      <script>
+        //factoria; of a no//
+        let fact = 1;
+    for (let i = 1; i <= 4; i++) {
+        fact *= i;
+    }
+    console.log(fact);
+      </script>
+      <script>
+     function revbool(a){
+     if(a>0){
+        return false;
+     }
+     else{
+    return true;
+     }
+
+         }
+   let reversebool=revbool();
+   console.log(reversebool);
+      </script>
+      <script>
+// return index of matching array element to string;
+// let ["a","b"], "a" //output indx=0;
+   function  matchwithstring(a,b){
+    for(let i=0;i<4;i++){
+       if(a[i]===b){
+      return a[i]
+       }
+    }
+
+   }
+  let match= matchwithstring(["a","b","c","d"],"a");
+   console.log(match);
+
+      </script>
+      <script>
+        //return element at that  index;
+      function element_Atindex(a,index){
+        for(let i=0;i<3;i++){
+            i==index;
+            return `the element is ${a[index]}`
+        }
+      }
+     console.log( element_Atindex([3,4,5],2))
+      </script>
+      <script>
+        // input "six" output 6;
+        let s="six"
+         if(s="six"){
+            console.log(6)
+         }
+      </script>
+      <script>
+        //if array incluedes element return true
+    let array=[1,2,3,4,5,6]
+    let find =array.includes(5);
+     console.log(find);
+      </script>
+      <script>
+
+
+          // return true if it has white space
+        function hasspaces(a){
+           if( a.indexOf(" ")!==-1){     
+            return true;
+           }
+           else{
+            return false;
+           }
+        }
+        console.log (hasspaces("helloworld"))
+      </script>
+      <script>
+        //take value as obj property and return
+        function volumeofbox(obj){
+        return obj.width*obj.height *obj.length
+        }
+     console.log(volumeofbox({
+            width:2,
+            height:5,
+             length:1
+        }))
+      </script>
+      <script>
+        //return true if last charac is e
+        function lastchar(a){
+         if(a[a.length-1]=="e"){
+            return true;
+         }
+         else{
+            return false;
+         }
+         
+        }
+     console.log( lastchar("the"));
+      </script>
+      <script>
+  // PASS STRING IF STRING LENGTH LESS THEN 3 RETURN FIRST TWO CHAR TWO TIMES
+     function string(a){
+     if(a.length>=3){
+       return a
+     }
+     else{
+      let x =a.slice(0,2).repeat(3);
+      return x;
+     }
+     }
+    console.log( string("ra"))
+      </script>
+      <script>
+      // function with 3 args 2 no and 1 array return array elements between that 2 no//
+         function ThreeArgs(a,b,arr){
+             for(let i=0;i<arr.length;i++){
+              if(a<arr[i]&&arr[i]<b) {
+                 
+               console.log(arr[i])
+              }
+             
+             }
+              
+         }
+     (ThreeArgs(3,7,[1,2,3,4,5,6,7]));
+      </script>
+      
+      <script>
+        // count true//
+        let  arrtrue=[true,false,true,false,true,false];
+      
+         let count=arrtrue.filter((value)=>{
+          if(value==true){
+            return value;
+           }
+         })
+         console.log(count);
+
+      </script>
+      <script>
+        //find the smallest and biggest number;
+        let arraybigsmall=[5,6,7,8];
+          let small=arraybigsmall[0];
+          let big=arraybigsmall[3];
+          let filterarray=[];
+          for(let i=0;i<arraybigsmall.length;i++) {
+        if(small> arraybigsmall[i])
+        {
+           small=arraybigsmall[i]
+            
+        }
+       if( big<arraybigsmall[i]){
+        big=arraybigsmall[i]
+       }
+      
+        filterarray.push(small,big)
+         filterarray.length=2;
+        
+          } 
+           console.log(filterarray);
+      </script>
+      <script>
+       // 2 function (f,g)inside a function parent function will call then and return that child function  which has larger value;
+        function parent(fun1,fun2){
+          if(fun2<fun1){
+            return fun2;
+          }
+          else{
+           return fun1 
+          }
+        }
+         let f=function(){
+          return 6;
+         }
+         let g=function(){
+          return 16;
+         }
+        console.log(parent(f,g));
+
+      </script>
+      <script>
+        // nested one array inside other if array first min elem greater then 2nd array min
+            // 1st array max element is greater then2nd array max element//
+          //ex a=[5,6],b=[4,4] ;o/p[5,6,4,4]
+          
+
+      </script>
+</body>
+</html>
+
+

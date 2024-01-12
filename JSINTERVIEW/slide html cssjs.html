@@ -1,0 +1,144 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+    <style>
+    *{
+      margin:0px;
+      padding:0px;
+      box-sizing:border-box;
+    }
+    main{
+        width:70%;
+        height:500px;
+          box-shadow:0px 0px 3px grey;
+          margin:auto;
+          margin-top:50px;
+          position:relative;
+          overflow:hidden;
+    }
+    .slide{
+      width:100%;
+      height:100%;
+      text-align: center;
+      position: absolute;
+      transition:1s;
+    }
+    nav{
+      text-align: center;
+      margin-top:15px;
+    }
+    </style>
+</head>
+<body>
+       <main>
+        <div class="slide " style="background-color: orange;">SLIDE1</div>
+        <div class="slide " style="background-color: green;">SLIDE2</div>
+        <div class="slide " style="background-color: yellow;">Slide3</div>
+        <div class="slide " style="background-color: palegreen;">Slide4</div>
+       </main>
+       <div class="nav">
+        <button  onclick="goprev()">Prev</button>
+        <button onclick="gonext()" >next</button>
+       </div>
+  <script>
+      let slides=document.querySelectorAll(".slide");
+      let counter=0;
+      // console.log(slides)
+      slides.forEach(function(slide,index){
+        slide.style.left=`${index*100}%`
+
+      })    
+        function gonext(){
+           counter++
+           slideimage()
+           console.log("hello")
+        }  
+   function goprev(){
+    counter--
+    console.log("hello")
+           slideimage()
+
+   }
+           
+         function slideimage(){
+          slides.forEach(function(slide){
+             slide.style.transform=`translateX(-${counter*100}%)`
+          })
+         } 
+  
+  </script>
+</body>
+</html>   -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slider</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    main {
+      width: 70%;
+      height: 300px;
+      margin-top: 10px;
+      margin: auto;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid red;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transition: 1s;
+
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="slide" style="background-color: red;">Slide4</div>
+    <div class="slide" style="background-color: orange;">Slide3</div>
+    <div class="slide" style="background-color: green;">Slide2</div>
+    <div class="slide" style="background-color: purple;">Slide1</div>
+  </main>
+  <button onclick="prev()">PREV</button>
+  <button onclick="next()">NEXT</button>
+  <script>
+    let count = 0;
+    let slides = document.querySelectorAll(".slide");
+    slides.forEach(function (slide, index) {
+      slide.style.left = `${index * 100}%`
+    })
+    // check this line //
+    function slider() {
+      slides.forEach(function (slide) {
+        slide.style.transform = `translateX(-${count * 100}%)`
+      })
+    }
+    function prev() {
+      count--
+      slider()
+    }
+    function next() {
+      count++
+      slider()
+
+    }
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- flex grow shrink flex basis(initial length of element )this all are applied to flex child-->
+   <style>
+    .flex{
+        background-color: aqua;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+    }
+    .cox1{
+        border:1px solid red;
+    }
+    .i1{
+        background-color: blue;
+        color: antiquewhite;
+        flex:0 1 auto; flex:0 1 100px;  /* flex grow shrink flex basis */
+    }
+    .i3{
+        background-color: green;
+        color:orange;
+        flex:0 1 1000px; 
+    }
+
+   </style>
+</head>
+<body>
+
+    <div class="flex">
+        <div class="cox1 i1">a</div>
+        <div class="cox1 i2 ">b</div>
+        <div class="cox1 i3">c</div>
+    </div>
+</body>
+</html>

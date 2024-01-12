@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMG SEARCH</title>
+</head>
+<style>
+  img {
+    width: 100%;
+  }
+</style>
+
+<body>
+  <div>
+    <input type="text" id="search" onkeyup="searchimg()">
+    <div class="img">
+      <img src="" id="img" alt="">
+    </div>
+  </div>
+</body>
+<script>
+  function searchimg() {
+    let search = document.getElementById("search").value;
+    console.log(typeof (search))
+    if (search == "cat") {
+      document.getElementById("img").src = "cat.jpg"
+    }
+    if (search == "dog") {
+      document.getElementById("img").src = "dog.jpg"
+
+    }
+    // else {
+    //   alert("check ur connection")
+    // }
+  }
+</script>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRID</title>
+</head>
+<style>
+  html {
+    font-size: 35px;
+  }
+
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box
+  }
+
+  /*   col means width row means height visually  */
+  .container {
+    position: absolute;
+    margin: 20px;
+    width: 900px;
+    height: 700px;
+    border: 1px solid red;
+    display: grid;
+    gap: 5px;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: 1fr 2fr 3fr; */
+    /* challenge   2nd col =2 times col-1, 3col=3times of col-1 */
+  }
+
+  .box-1 {
+    background-color: red;
+    /* advantage of giving this four values by this your value will not be distorted if we giving two value layout getting distorted */
+    grid-column-start: 3;
+    grid-column-end: 4;
+    /*   shortcut of   1st two above two line*/
+    grid-column: 3/4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    /*  short of above  2 lines */
+    grid-row: 1/2;
+  }
+
+  /*   change box-1 position to box-9 position */
+  .box-1 {
+    grid-row: 3/4;
+    grid-column: 3/4;
+  }
+
+  .box-2 {
+    /* shorthand property of grid col row start end in one line and  */
+    grid-area: 2/3/2/3;
+    background-color: green;
+  }
+
+  .box-3 {
+
+
+    background-color: plum;
+  }
+
+  .box-4 {
+    background-color: purple;
+  }
+
+  .box-5 {
+    background-color: fuchsia;
+  }
+
+  .box-6 {
+    /* expand */
+    grid-row: 2/3;
+    grid-column: 1/5;
+    /* one more way to expand */
+    /* grid-column: 1/-1; */
+
+
+    background-color: goldenrod;
+  }
+
+  .box-7 {
+    background-color: navy;
+    /*  one more way to do   style like box-6 */
+    grid-row: 3/4;
+    grid-column: 1/4;
+  }
+
+  .box-8 {
+    background-color: teal;
+    grid-row: 3/4;
+  }
+
+  .box-9 {
+    background-color: tomato;
+  }
+</style>
+
+<body>
+
+  <div class="container">
+    <div class="box box-1">Item1</div>
+    <div class="box  box-2">item2</div>
+    <div class="box box-3">Item3</div>
+    <div class="box box-4">Item4</div>
+    <div class="box box-5">Item5</div>
+    <div class="box box-6">Item6</div>
+    <div class="box box-7">Item7</div>
+    <div class="box box-8">Item8</div>
+    <div class="box box-9">Item9</div>
+
+
+</body>
+
+</html>

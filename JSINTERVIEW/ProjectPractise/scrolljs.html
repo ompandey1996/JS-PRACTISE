@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    .height {
+      height: 200px;
+      background-color: yellowgreen;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: red;
+      font-size: 2rem;
+    }
+
+    .stickpos {
+
+      position: sticky;
+      top: 0;
+      left: 0
+    }
+  </style>
+</head>
+
+<body style="height:2000px">
+  <!-- position sticky after scrolling this much height -->
+  <div class="height"></div>
+  <div class="nav">
+    <div>a</div>
+    <div>b</div>
+    <div>c</div>
+    <div>d</div>
+  </div>
+  <script>
+    window.addEventListener("scroll", () => {
+      let nav = document.querySelector(".nav");
+      if (window.pageYOffset > 200) {
+        nav.classList.add("stickpos");
+      }
+      else {
+        nav.classList.remove("stickpos");
+      }
+
+    })
+  </script>
+</body>
+
+</html>

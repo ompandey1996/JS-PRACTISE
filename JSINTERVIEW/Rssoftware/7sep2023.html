@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body style="background-color: black;">
+  <script>
+    //reverse string without inbuilt function
+    // hello ram o/p ram hello
+    function revstr(a) {
+      let result = [];
+      let part = a.split(" ")
+      for (let i = part.length - 1; i >= 0; i--) {
+
+        result.push(part[i])
+      }
+      return result.toString()
+
+    }
+    console.log(revstr("i am don ")) 
+  </script>
+  <script>
+    //   return true false if all array elements are identical//
+    function areAllElementsIdentical(arr) {
+      for (let i = 1; i < arr.length; i++) {
+        if (arr[i] !== arr[0]) {
+          return false; // Found a different element, return false
+        }
+
+      }
+      return true; // All elements are identical
+    }
+
+    console.log(areAllElementsIdentical(["a", "a", "a"])); // Output: true
+    console.log(areAllElementsIdentical(["a", "b", "c"])); // Output: false
+
+  </script>
+  <script>
+
+  </script>
+  <script>
+    //move all capital letter to the front of the word//
+    function capToFront(word) {
+      let capitalLetters = "";
+      let lowercaseLetters = "";
+
+      for (let i = 0; i < word.length; i++) {
+        if (word[i] === word[i].toUpperCase()) {
+          capitalLetters += word[i];
+
+        } else {
+          lowercaseLetters += word[i];
+        }
+      }
+
+      return capitalLetters + lowercaseLetters;
+    }
+
+    console.log(capToFront("hApPy")); // Output: "APhpy"
+    console.log(capToFront("moveMENT")); // Output: "MENTmove"
+
+  </script>
+  <script>
+    //two  arguments are given    one word and other array [asc,[1,3,4]]
+    function arrangeno(order, array) {
+      if (order == "asce") {
+        let ascend = array.sort(function (a, b) {
+          return a - b;
+
+        })
+        return ascend
+      }
+
+      else {
+        let desc = array.sort(function (a, b) {
+          return b - a;
+          console.log(desc)
+        })
+        return desc
+
+      }
+
+    }
+    console.log(arrangeno("asce", [1, 2, 5, 524, 673, 536]))
+    console.log(arrangeno("desc", [1, 2, 5, 524, 673, 536]))
+  </script>
+  <script>
+    function Volumeofboxes(a, b, c) {
+      let fstpart = 1;
+      let sndpart = 1;
+      let trdpart = 1;
+      for (let i = 0; i < a.length; i++) {
+        fstpart *= a[i]
+
+      }
+      for (let i = 0; i < b.length; i++) {
+        sndpart *= b[i]
+
+      }
+      for (let i = 0; i < c.length; i++) {
+        trdpart *= c[i]
+
+      }
+      return fstpart + sndpart + trdpart;
+    }
+    console.log(Volumeofboxes([2, 3, 2], [6, 6, 7], [1, 2, 1]))
+  </script>
+  <script>
+    //       Arrays can be mixed with various types. Your task for this challenge is to sum all the number elements in the given array. Create a function that takes an array and returns the sum of all numbers in the array.
+
+    // Examples
+    // numbersSum([1, 2, "13", "4", "645"]) ➞ 3
+    function numbersSum(array) {
+      let sum = 0;
+      for (let item of array) {
+        if (typeof item === "number") {
+          sum += item;
+        }
+      }
+      return sum;
+    }
+    console.log(numbersSum([1, 2, "13", "4", "645"]))
+  </script>
+  <script>
+    //  array is special if even index has even no and odd index has odd no   is special   if special return true
+    function specialarray(a) {
+      let result;
+      for (let i = 0; i < a.length; i++) {
+
+        //   even //
+        if (a[i] % 2 == 0 && i % 2 == 0) {
+          continue;
+        }
+        // odd  
+        if (a[i] % 2 != 0 && i % 2 != 0) {
+          continue
+        }
+        return false
+      }
+      return true;
+    }
+    console.log(specialarray([0, 1, 2, 4, 7]))
+  </script>
+
+
+
+  <script>
+
+
+    function rotateRight(arr, steps) {
+      const n = arr.length;
+      if (n === 0) {
+        return arr;
+      }
+
+      // Calculate the effective number of steps (in case steps > n)
+      const effectiveSteps = steps % n;
+
+
+      const rotatedArray = [];
+
+
+      for (let i = n - effectiveSteps; i < n; i++) {
+        rotatedArray.push(arr[i]);
+      }
+
+      for (let i = 0; i < n - effectiveSteps; i++) {
+        rotatedArray.push(arr[i]);
+      }
+
+      return rotatedArray;
+    }
+
+    const inputArray = [1, 2, 3, 4, 5, 6];
+    const steps = 3;
+    const rotatedArray = rotateRight(inputArray, steps);
+    console.log(rotatedArray); // Output: [6, 5, 4, 1, 2, 3]
+
+  </script>
+  <script>
+    function Countzero(n) {
+      let count = 0;
+      let binary = n.toString(2);
+      console.log(binary);
+      for (let i = 0; i < binary.length; i++) {
+        if (binary[i] == 0) {
+          count++
+        }
+      }
+      console.log(count)
+    }
+    Countzero(12)
+  </script>
+  <script>
+    // array of object doing sum of  object budget
+    function budjetcalc(n) {
+      let sum = 0;
+      for (let elem of n) {
+
+        sum += elem.budjet;
+      }
+      console.log(sum)
+    }
+    budjetcalc([{ name: "ajay", budjet: 500 }, { name: "suajy", budjet: 400 }])
+
+  </script>
+  <script>
+    // mirror an array ex[1,2,3,4] o/p [1,2,3,4,3,2,1]
+    function mirrorarray(a) {
+      let mirrarray = [];
+      for (let i = 0; i < a.length; i++) {
+        mirrarray.push(a[i])
+      }
+      for (j = a.length - 2; j >= 0; j--) {
+        mirrarray.push(a[j])
+      }
+      console.log(mirrarray)
+    }
+    mirrorarray([1, 2, 3, 4])
+
+  </script>
+  <script>
+    function closure(x) {
+      return function () {
+        return x;
+      }
+
+    }
+    let x = closure(3);
+    let y = x();
+    console.log(y)
+
+  </script>
+  <script>
+    //Given a square matrix (i.e. same number of rows as columns), its trace is the sum of the entries in the main diagonal (i.e. the diagonal line from the top left to the bottom right).
+
+    // As an example, for:
+
+    //  [
+    //   [1, 2, 3],
+    //   [4, 5, 6],
+    //   [7, 8, 9]
+    // ]
+    // ... the trace is 1 + 5 + 9 = 15.
+
+    // Write a function that takes a square matrix and computes its trace.
+
+    // Examples
+    // trace([
+    //   [1, 4],
+    //   [4, 1]
+    // ]) ➞ 2
+
+    // // 1 + 1 = 2
+
+    // trace([
+    //   [1, 2, 3],
+    //   [4, 5, 6],
+    //   [7, 8, 9]
+    // ]) ➞ 15
+    // // 1 + 5 + 9 = 15
+
+    //     </script>
+  <script>
+    //      Given a square matrix (i.e. same number of rows as columns), its trace is the sum of the entries in the main diagonal (i.e. the diagonal line from the top left to the bottom right).
+
+    // As an example, for:
+
+    // [
+    //   [1, 2, 3],
+    //   [4, 5, 6],
+    //   [7, 8, 9]
+    // ]
+    // ... the trace is 1 + 5 + 9 = 15.
+
+    // Write a function that takes a square matrix and computes its trace.
+
+    // Examples
+    // trace([
+    //   [1, 4],
+    //   [4, 1]
+    // ]) ➞ 2
+
+    // // 1 + 1 = 2
+
+    // trace([
+    //   [1, 2, 3],
+    //   [4, 5, 6],
+    //   [7, 8, 9]
+    // ]) ➞ 15
+
+    // // 1 + 5 + 9 = 15
+
+    // function areAllElementsIdentical(arr) {
+    //   if (arr.length === 0) {
+    //     return true; // An empty array is considered to have identical elements
+    //   }
+
+    //   const firstElement = arr[0];
+
+    //   for (let i = 1; i < arr.length; i++) {
+    //     if (arr[i] !== firstElement) {
+    //       return false; // Found a different element, return false
+    //     }
+    //   }
+
+    //   return true; // All elements are identical, return true
+    // }
+
+    // // Example usage:
+    // console.log(areAllElementsIdentical([1, 1, 1, 1])); // Output: true
+    // console.log(areAllElementsIdentical([1, 2, 3, 4])); // Output: false
+    // console.log(areAllElementsIdentical([])); // Output: true (empty array)
+  </script>
+  <script>
+    //take 3 argument return the greatest one //   
+    function greatestno(h, m, s) {
+      let secinhr = h * 60 * 60;
+      let secinmin = m * 60;
+      let second = s * 60 / 60;
+      if (secinhr > secinmin && second) {
+        console.log("hr has more values")
+      }
+      else if (secinmin > secinhr && second) {
+        console.log("min has more values")
+      }
+      else if (second > secinhr && secinmin) {
+        console.log("sec has more values")
+      }
+    }
+    greatestno(0.0000001, 9, 890000)
+  </script>
+  <script>
+    //REMOVE DUPLICATE AND  SORT
+  </script>
+  <SCRIPT>
+    //   FIND MEAN//
+
+  </SCRIPT>
+</body>
+
+</html>

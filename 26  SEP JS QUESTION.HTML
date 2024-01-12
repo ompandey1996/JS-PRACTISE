@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body style="background-color: black;">
+  <script>
+
+  </script>
+  <script>
+    // capitalize each first letter
+    // [ram killed the tiger] Ram Killed The Tiger//
+    function Capitalize(a) {
+      let capital
+      return a.map(function (value) {
+        return (capital = value[0].toUpperCase() + value.slice(1))
+      })
+    }
+    console.log(Capitalize(['ram', 'killed ', 'the', 'tiger']))
+  </script>
+  <SCRIPT>
+    //SUM OF TWO SMALLEST NO 
+    let array = [1, 2, 3, 4, 5, 6] //o/p-3 
+    let sum = 0;
+    let arr2 = array.sort(function (a, b) { return a - b })
+    sum += arr2[0] + arr2[1];
+    console.log(sum)
+  </SCRIPT>
+  <script>
+    //  WRITE A FUNCTION WHICH TAKES TWO ARGUMENT LETTER AND WORD IF FOUND LETTER REVERSE THEB REVERSE IT //
+    // EX RAM KILLED THE TIGER // OP MAR KILLED THE TIGER //
+    function ReverseFromLetter(word, letter) {
+      let words = word.split(' ')
+
+      for (let i = 0; i < words.length; i++) {
+        if (words[i].includes(letter)) {
+          words[i] = words[i].split('').reverse().join('')
+
+        }
+      }
+      return words.join(" ");
+    }
+    console.log(ReverseFromLetter('ram killed the tige', 'k'));
+  </script>
+  <script>
+    //return 2 middle char if even length and if odd 1  miidle char 
+    // ex roma  om  ex roman m
+    function Findmiddlechar(n) {
+      let length = n.length;
+      if (length % 2 == 0) {
+        let mid = n[length / 2];
+        let second
+        console.log(mid)
+
+      }
+
+
+    }
+    Findmiddlechar("alam")
+  </script>
+  <script>
+    // factor of 12 =1,2,3,4,6,12//
+    // find no of factors of a no
+    function factor(n) {
+      let factor = " "
+      for (i = 1; i <= n; i++) {
+        if (n % i == 0) {
+          factor += i + " ";
+
+        }
+
+      }
+      console.log(`the factors are ${factor}`)
+    }
+    factor("100")
+  </script>
+  <script>
+    function findSubarray(subarr) {
+      for (let elem of subarr) {
+        console.log(elem.length)
+      }
+    }
+    findSubarray([[1, 2, 3], [2, 3, 4], [3, 5, 2]])  //[[1,2],[2.3]] o/p 2 [[1,2],[4,5],[9,0]] o/p=3
+  </script>
+  <script>
+    // a no automorphic if n and last digit output of square of n are same   5 =25 automorphic 6 36 automorphic//
+    //
+    // array given["ajay,sujay"],[ceo,md] o/p ={ajay:ceo,sujay } //
+    let names = ["ajay", "sujay"]
+    let position = ["ceo", "md"]
+    let obj = {};
+    names.forEach((name, i) => {
+      obj[name] = position[i];
+      console.log(obj)
+    })
+  </script>
+  <script>
+    // if acharacter coming two times return false    else true
+    function DuplicateFalse(A) {
+      let hasDuplicate = false;  // Flag to track duplicates
+
+      A.toLowerCase().split("").forEach(function (value, index) {
+        // Check if the current character is a duplicate
+        if (A.indexOf(value) !== index) {
+          hasDuplicate = true;
+        }
+      });
+
+      return hasDuplicate ? "false" : "true";
+    }
+
+    console.log(DuplicateFalse("AppLE"));  // Output: false
+
+  </script>
+  <script>
+    // Create a function that takes a number as its parameter and returns another function. The returned function must take an array of numbers as its parameter, and return an array of the numbers divided by the number that was passed into the first function.
+    function parent(n) {
+      let arr2 = []
+      return function child(arr) {
+        for (let i = 0; i < arr.length; i++) {
+          arr2.push(arr[i])
+
+        }
+        return arr2;
+      }
+    }
+    let Parent = parent(1);
+    let Child = Parent([1, 1, 1]);
+    console.log(Child);
+  </script>
+  <script>
+    //  CHECK A NO IS PRGENIC IF N*N+1=RESULT//EX 12*13=156 ITA A PROGENIC 49=7*7//NOT A PROGENIC NO//
+
+    // function FindProgenic(...n) {
+    //   let result = [];
+    //   for (let i = 0; i <= n; i++) {
+    //     if (n % i == 0) {
+    //       result.push(i)
+
+    //     }
+    //   }
+    //   for (let i = 0; i <= result; i++) {
+    //     if (result[i] * result[i + 1] == n)
+    //       console.log(`the progenic is ${n}`)
+    //   }
+    // }
+    // FindProgenic(12)   
+
+    function FindProgenic(n) {
+      let result = [];
+
+      // Find factors of n
+      for (let i = 1; i <= n; i++) {
+        if (n % i === 0) {
+          result.push(i);
+        }
+      }
+
+      // Check for progenic number
+      for (let i = 0; i < result.length - 1; i++) {
+        if (result[i] * result[i + 1] === n) {
+          console.log(`${n} is a progenic number`);
+          return;
+        }
+      }
+
+      console.log(`${n} is not a progenic number`);
+    }
+
+    // Example usage
+    FindProgenic(16);
+  </script>
+  <script>
+    //count no of subarrays//
+    let arrays = [1, [2, 3], [4, 5, 6]]
+    let length = ""
+    for (elem of arrays) {
+      length = elem.length;
+    }
+    console.log(length)
+  </script>
+  <script>
+    //return string which have no ["a","b12",""c]  op b12//
+    function numInStr(arr) {
+      const result = [];
+
+      for (let i = 0; i < arr.length; i++) {
+        if (/\d/.test(arr[i])) {  // Check if the string contains a digit
+          result.push(arr[i]);
+        }
+      }
+
+      return result;
+    }
+
+    console.log(numInStr(["1a", "a", "2b", "b"]));  // Output: ["1a", "2b"]
+
+
+  </script>
+  <script>
+    //   Write a function that returns the least common multiple (LCM) of two integers.
+
+    // Examples
+    // lcm(9, 18) ➞ 18
+
+    // lcm(8, 5) ➞ 40
+
+    // lcm(17, 11) ➞ 187//
+    function lcm(n1, n2) {
+      var smaller = Math.min(n1, n2);
+      var larger = Math.max(n1, n2);
+
+      var res = larger;
+      while (res % smaller !== 0) {
+        res += larger;
+      }
+
+      return res;
+    }
+
+
+    console.log(lcm(5, 6))
+  </script>
+  <script>
+    //write a function  to execute a logic where last character of each word is the first letter of next word and case sensitive not an issue //
+    //ex Carlos swam Mango
+    function FindSmoothSentence(sent) {
+      let words = sent.split(" ");
+      for (let i = 0; i < words.length; i++) {
+        words[i].split("")
+      }
+
+    }
+    FindSmoothSentence("carlos swam mango")
+  </script>
+  <script>
+    //    write  function   which will take array and a no n it we have decrease -2  if array array element is ebven and +2 for odd array element   and we have perform till the value of second arg//
+    //[3,6,11]-[5,4,13] [7 ,2 15],[9,0,17] //final op-[9,0,17]
+    function UpDownElementsValues(arr, n) {
+      let formedarr = [];
+      while (n >= 1) {
+
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] % 2 == 0) {
+            arr[i] = arr[i] - 2;
+            formedarr.push(arr[i])
+          }
+          else {
+            arr[i] = arr[i] + 2;
+            formedarr.push(arr[i])
+          }
+        }
+        n--
+      }
+      formedarr = arr
+      return formedarr;
+
+    }
+    let upside = UpDownElementsValues([3, 6, 7], 3);
+    console.log(upside)
+  </script>
+
+</body>
+
+</html>

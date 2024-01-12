@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup-Box</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    .Popup-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+
+
+    }
+
+    .popup-box {
+      width: 70%;
+      border: 1px solid red;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .heading h1 {
+      font-size: 1rem;
+      color: red;
+    }
+
+    button {
+      display: inline-block;
+      margin: 0.5rem 0;
+      color: blueviolet;
+      background-color: brown;
+      padding: 3px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="Popup-container" id="Popup-container">
+    <div class="popup-box">
+      <div class="heading">
+        <h1>PopUp Box</h1>
+      </div>
+      <div class="para">
+        <p>Lorem, ipsum dolor.</p>
+        <p>Lorem, ipsum dolor.</p>
+        <p>Lorem, ipsum dolor.</p>
+      </div>
+      <div class="btn">
+        <button onclick="closepopup()">Close</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    function closepopup() {
+      let elem = document.getElementById("Popup-container");
+      elem.style.display = "none";
+    }
+    function openpopup() {
+      let elem = document.getElementById("Popup-container");
+      elem.style.display = "flex";
+
+
+    }
+    window.onload = function () {
+      openpopup();
+    }
+  </script>
+</body>
+
+</html>

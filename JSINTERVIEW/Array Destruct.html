@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Destructuring</title>
+</head>
+<body>
+    <script>
+ Array Destructing
+let array=["java","python","c++","javascript"]
+   let[first,,Second,Third,Fourth]=array;
+
+   console.log(first);
+    as we have given comma so it will consider c++ as  second elem 
+   console.log(Second);
+   Array dest with function
+   function arry(){
+    return[10,20,];
+   }
+   let[a,b,c]=arry();
+     console.log(a)
+     console.log(b)
+     console.log(c)
+     function array2(){
+        return[1,2,3,4,5,6]
+     }
+     let[e,d,...args]=array2();
+     console.log(e)
+     console.log(d)
+     console.log(args)
+ nested array destructureing
+
+function alp(){
+return[
+    5,10,
+    [1,2,3 ]
+]
+}
+
+let[k,t,[...arg]]=alp()
+console.log(k)
+console.log(arg)
+
+    </script>
+</body>
+</html>

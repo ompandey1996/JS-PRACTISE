@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body style="background-color: black;">
+  <!-- capitalize fst letter -->
+  <script>
+
+    function CapitalizeFstLetter(n) {
+      let words = n.split(" ");
+      let capitalizedWords = words.map(function (value) {
+        return value.charAt(0).toUpperCase() + value.slice(1).toLowerCase();
+      });
+      return capitalizedWords.join(" ");
+    }
+
+    console.log(CapitalizeFstLetter("raM killed TIGER"));
+
+  </script>
+  <script>
+
+    //  sum of even array elents and odd elents between then which has higher value consider winner
+    // function parent(...args) {
+    //   let evensum;
+    //   let oddsum;
+    //   function even() {
+    //     for (let i = 0; i < args.length; i++) {
+    //       if (args[i] % 2 == 0) {
+    //         evensum += args[i]
+    //       }
+    //     }
+    //     return evensum
+    //   }
+    //   function odd() {
+    //     for (let i = 0; i < args.length; i++) {
+    //       if (args[i] % 2 !== 0) {
+    //         oddsum += args[i]
+    //       }
+    //     }
+    //     return oddsum;
+    //   }
+    //   even();
+    //   odd();
+    //   if (even() > odd()) {
+    //     return console.log("evenno")
+    //   }
+    //   else {
+    //     return console.log("oddno")
+    //   }
+    // }
+    // console.log(parent([1, 12, 3, 4, 5]))   
+
+    function Parent(...n) {
+      let evensum = 0;
+      let oddsum = 0;
+
+      function even() {
+        // Reset evensum to 0 for each function call
+        evensum = 0;
+
+        for (let i = 0; i < n.length; i++) {
+          if (n[i] % 2 === 0) {
+            evensum += n[i];
+          }
+        }
+        return evensum;
+      }
+
+      function odd() {
+        // Reset oddsum to 0 for each function call
+        oddsum = 0;
+
+        for (let i = 0; i < n.length; i++) {
+          if (n[i] % 2 !== 0) {
+            oddsum += n[i];
+          }
+        }
+        return oddsum;
+      }
+
+      even();
+      odd();
+
+      if (even() > odd()) {
+        return `even ${evensum}`;
+      } else {
+        return `odd ${oddsum}`;
+      }
+    }
+
+    console.log(Parent(11, 2, 3, 4));
+
+
+
+  </script>
+  <script>
+    //takes a division if result without any decimal then true else false
+    function detectdecimal(n) {
+      let result = eval(n);
+      if (Number.isInteger(result)) {
+        console.log("false");
+      } else {
+        console.log("true");
+      }
+    }
+
+    detectdecimal("25 / 3");
+
+  </script>
+
+  <script>
+    // given three args   the last element of  arg3 = multiplication of last two digit   of fst two args 
+    //  ex 13 13 19 // 3*3=9
+    function lastdig(...args) {
+      let result = [];
+      let multiply;
+      //to extract last element
+      for (let i = 0; i < args.length; i++) {
+        result.push(args[i].toString().split("").slice(-1).join(" "))
+
+      }
+      for (i = 0; i < result.length - 1; i++) {
+        multiply *= result[i]
+      }
+      if (multiply == result.length - 1) {
+        console.log("true")
+      }
+      else {
+        console.log("false")
+      }
+
+    }
+    lastdig(13, 14, 19)
+  </script>
+  <script>
+    //pin validation it should be 4 0r 6 digit it can contain alphanumeric charcter //
+    function validate(pin) {
+      if (pin.length == 4 || pin.length == 6) {
+        let regex = /[^a-zA-Z/d+$|^/d+$]/g
+        let value = regex.test(pin)
+        console.log(value)
+      }
+
+      else {
+        console.log("please fill  4 digit or 6 digit ")
+      }
+    }
+    validate("a1234Z")
+
+  </script>
+  <!-- WRTE ELEMENTS WITH THEIR FREQ [aaaa]/ op {a:4} -->
+  <script>
+
+    function frequency(...args) {
+      for (let i = 0; i < args.length; i++) {
+        let count = 0;  // Move count inside the outer loop to reset for each element
+
+        for (let j = 0; j < args.length; j++) {
+          if (args[j] == args[i]) {
+            count++;
+          }
+        }
+
+        console.log(`The count of ${args[i]} is ${count}`);
+      }
+    }
+
+    frequency("A", "A", "A");  // Corrected function call without square brackets
+
+  </script>
+  <script>
+    //  validate indian phn no //
+    let phn = 8210197015;
+    let regex = /[^91\d{10}]+/g;
+    let res = regex.test(phn);
+    console.log(res);
+  </script>
+  <script>
+    //validate email
+    try {
+      let email = "ompandey092@gmail.com";
+      let emailregex = /[^a-zA-Z\d]+@[a-z]+\.[a-z]{2,3}/;
+      let emailres = emailregex.test(email);
+      cnsole.log(emailres);
+    }
+    catch (err) {
+      console.log(`the err is ${err}`)
+    }
+
+  </script>
+
+  <SCRIPT>
+    // let newarr = [1, 2, 3, 5, 6];
+    // let newelement = 4;
+    // let position = 3;
+
+    // let newArrWithInsertedElement = [];
+
+    // for (let i = 0; i < newarr.length + 1; i++) {
+    //   if (i === position) {
+    //     newArrWithInsertedElement[i] = newelement;
+    //   } else {
+    //     newArrWithInsertedElement[i] = newarr[i < position ? i : i - 1];
+    //   }
+    // }
+
+    // console.log(newArrWithInsertedElement);
+    let arr = [1, 2, 3, 5]
+    let position = 3;
+    let elemet = 4;
+    let newarr = [];
+    for (i = 0; i < arr.length + 1; i++) {
+      if (i == 3) {
+
+        newarr[position] = elemet;
+      }
+      else {
+        newarr[i] =
+          arr[i < position ? i : i - 1]
+      }
+
+    }
+
+    console.log(newarr)
+
+
+  </SCRIPT>
+  <script>
+    //delete last element
+    let arrays = [1, 2, 3];
+    let posit = 2;
+    let newarray = [];
+    for (let i = 0; i < arrays.length; i++) {
+      if (arrays[i] !== arrays[posit]) {
+        newarray[i] = arrays[i];
+
+      }
+    }
+    console.log(newarray)
+  </script>
+  <script>
+    //fibonaci series   means next element sum of   fst two   elements//
+    function fibonaci(n) {
+      let fib = [0, 1];
+      for (let i = 2; i < n; i++) {
+        fib[i] = fib[i - 1] + fib[i - 2];
+        console.log(fib)
+      }
+    }
+    fibonaci(4); //o(4)
+
+  </script>
+
+
+  <script>
+    // op based question
+
+    var a = 2, b = 3;
+    var result = a && b;  //3  if first is truthy it will return 2nd as  o/p viceversa
+
+  </script>
+  <script>
+    //factorial  4=4*3*2*1
+    function findfactorial(n) {
+      let factorial = 1;
+      for (i = 4; i >= 1; i--) {
+        factorial *= i;
+      }
+      return factorial;
+    }
+    console.log(findfactorial()) //o(4)
+  </script>
+  <script>
+
+
+    const data = ["piya", "priya", "supriya"];
+    const [y] = data;
+    console.log(y); //"priya"
+    //Explaination : We are doing destructuring here. y is representing the first index only
+  </script>
+  <script>
+
+    // let data ={name:"priya"}
+    // let data1={city:"ABC", name: "supriya"}
+    // data = {...data, ...data1} //merge 2 objects
+    // console.log(data); // { name:"supriya", "city": "ABC"}
+    // //Explaination : If we have same keys while merging then the position of the property will remain same but the value get updated with new value. Because in an objects Keys hould be unique.
+    // -------------------------------------------
+
+    //   </script>
+  <script>
+
+    const results = false || {} || 20 || null;
+    console.log(results);
+  </script>
+
+
+  <script>
+    let ats = 2;
+    setTimeout(() => {
+      console.log(ats)
+    }, 0)
+  </script>
+  <script>
+
+    const foo = () => console.log("first");
+    const bar = () => setTimeout(() => console.log("second"));
+    const baz = () => console.log("third");
+    bar();
+    foo();
+    baz();
+
+
+
+  </script>
+  <script>
+    const numbers = [1, 2, 3];
+    numbers[9] = numbers;
+    console.log(numbers); //[1,2,3,,,,.......]
+  </script>
+  <script>
+
+    var player = "Virat";
+    function displayPlayer() {
+      if (player === "Virat") {
+        var player = "VK";
+        console.log(player);
+      }
+      console.log(player);
+    }
+    displayPlayer()
+
+  </script>
+  <script>
+    const arrs = [];
+
+    for (var i = 0; i < 5; i++) {
+      arrs[i] = function () {
+        return i;
+      };
+    }
+    //  op 5 5  as   var   can be redeclared again and ahgain so final value is 5 
+    console.log(arrs[0]());
+    console.log(arrs[4]());
+
+
+  </script>
+  <script>
+
+    let person1 = {
+      name: { firstName: "Jayesh" },
+      age: 24,
+    };
+    let person2 = { ...person1 };
+
+    person2.name.firstName = "Virat";
+    person2.age = 33;
+
+    console.log(person1.name.firstName);
+    console.log(person1.age)
+
+
+  </script>
+
+  <script>
+    //difference between let var   and const //
+    var q = 10;
+    var q = 20;//op -20
+    //------------//
+    let x = 10;
+    // let x=20; op -refer err as  cannt be redecl
+    x = 30// op -30 // we can do update of x but cant redeclare
+    //---------------//
+    // var t = 20;
+    // let t = 20;
+    // console.log(t) //  err will comne  as let cant be redeclared 
+    ji = 20;
+    var ji;
+    console.log(ji)
+    // ki = 20;
+    // let ki;
+    // console.log(ki) // syn err
+    //-------------------------------//
+    //const can be redeclared  and need to assign values with declaration //
+    const c = 20;
+    c = 30;
+    console.log(c)// err will cone as var with const behave like this
+
+  </script>
+  <script>
+
+    // const num = parseInt('7*6', 10);
+  </script>
+
+  <SCRIPT>
+
+
+
+    function getInfo(member, year) {
+      member.name = 'Lydia';
+      year = '1998';
+    }
+
+    const person = { name: 'Sarah' };
+    const birthYear = '1997';
+
+    getInfo(person, birthYear);
+
+    console.log(person, birthYear);
+
+  </SCRIPT>
+</body>
+
+</html>

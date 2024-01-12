@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Transition</title>
+    <style>
+        .box{
+            height:250px;
+            width:120px;
+            background-color: blueviolet;
+            transition-property: width,height,background-color;
+            transition-duration: 2s,4s,6s;
+            transition-timing-function:ease;
+            transition-delay:1s,2s,3s,4s ;
+        }
+        .btn{
+            background-color: orangered;
+            color: white;
+            transition:all,4s;
+        
+        }
+        .btn:hover{
+        background-color: blue;
+        color:red;
+
+        }
+        .box:hover{
+            /* transform: rotate(180deg); */
+            border:2px solid red;
+            width:250px;
+            height:100px;
+            background-color:gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    
+    <button class="btn ">Clickme</button>
+</body>
+</html>

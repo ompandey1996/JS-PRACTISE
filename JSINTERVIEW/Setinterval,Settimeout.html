@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function hello() {
+      console.log("hello")
+    }
+    let timeout = setTimeout(function () {
+      hello()
+    }, 1000);
+    // clear timeout
+    clearTimeout(timeout);
+  </script>
+
+  <script>
+
+    function DIAL() {
+      console.log("DIAL");
+    }
+    let y = setInterval(function () {
+      DIAL()
+    }, 1000);
+    // clearInterval(y);
+    // to stop after 5s we need to combine power of settimeout and clear interval;
+    setTimeout(function () {
+      clearInterval(y);
+    }, 3000)
+
+  </script>
+</body>
+
+</html>

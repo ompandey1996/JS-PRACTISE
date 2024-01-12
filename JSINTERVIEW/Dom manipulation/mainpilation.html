@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <ol id="operation" style="background-color: red;">
+    <li>hello</li>
+    <li>MAI</li>
+    <li>hU</li>
+    <li>don</li>
+    <li>mujhe</li>
+    <li>pehchano</li>
+    <li>maihudon</li>
+    <li>pehchano</li>
+  </ol>
+
+
+
+  <ol id="fstol">
+    <li>a</li>
+    <li>a</li>
+    <li>a</li>
+    <li>a</li>
+  </ol>
+  <ol class="fstol">
+    <li class="fstol">aaaa</li>
+    <li class="fstol">bbbb</li>
+    <li class="fstol">cccc</li>
+    <li class="fstol">dddd</li>
+  </ol>
+  <!-- tagname operation -->
+  <p>hello</p>
+  <h2>hi1</h2>
+  <h2>hi2</h2>
+  <h2>hi3</h2>
+  <h2>hi4</h2>
+  <p>hiligiri</p>
+  <!-- query selecter  comes into play when we need to select particular element among different elements with same  class name ex  we have 3 elements h1,h2,p  having same class but want to target only p -->
+
+  <h2 class="head">Hello</h2>
+  <h2 class="head">HelloMini2</h2>
+  <p class="head">HelloMini3</p>
+  <h3 class="head">HelloMini4</h3>
+
+  <!-- accessing parent child sibling -->
+  <ol class="parent">
+    <li class="child">FstChild</li>
+    <li class="child">SndChild</li>
+    <li class="child">3rdChild</li>
+    <li class="child">4thChild</li>
+    <li class="child">5thChild</li>
+  </ol>
+
+  <ol id="menu">
+    <li>hello</li>
+    <li>teri</li>
+    <li>meri</li>
+    <li>kahani</li>
+  </ol>
+
+</body>
+
+</html>
+<script>
+  let elem = document.getElementById("fstol");
+  let elem2 = document.getElementsByClassName("fstol");
+  console.log(elem);
+  console.log(elem2);
+
+  //  operation with class//
+  let elem3 = document.getElementsByClassName("fstol")[4];
+  console.log(elem3)
+
+  ///operstion with tagname//
+  let elem4 = document.getElementsByTagName("p");
+  console.log(elem4);
+
+  //queryselecter//
+
+  let elem5 = document.querySelector("p.head");
+  console.log(elem5);
+  //accessing Parent Child Sibling//
+
+  let child = document.getElementsByClassName("child")[0];
+  let parent = child.parentElement;
+  console.log(parent);
+
+  //accessing child from parent//
+  let elem7 = document.getElementsByClassName("parent")[0];
+  let Children = elem7.children;
+  console.log(Children);
+  //accessing fstchilelem and last childelem//
+  let elem8 = document.getElementsByClassName("parent")[0];
+  let fstchild = elem8.firstElementChild;
+  let lstchild = elem8.lastElementChild;
+  console.log(fstchild);
+  console.log(lstchild);
+</script>
+<script>
+  // append
+  let li = document.createElement("li");
+  // let text = document.createTextNode("barish ka pani");
+  // li.appendChild(text);
+  // Shortcut of fst two lines
+  //to add class//
+  li.textContent = "barisho ka pani"
+  li.className = "red"
+
+  let ol = document.getElementById("menu");
+  ol.appendChild(li);
+
+</script>
+
+<script>
+  //   renove replace insertbefore//
+  let oper = document.getElementById("operation");
+  let childrem = oper.firstElementChild;
+  oper.removeChild(childrem);
+   //replace //
+   let newelem=document.createElement("li");
+    newelem.textContent="bhago don aaya";
+       let replacedchild=oper.firstElementChild;
+       
+      oper.replaceChild(newelem,replacedchild);
+  //INSERTBEFORE
+  let lis2 = document.createElement("li");
+  lis2.textContent = "msi hu billi"
+  let position = oper.lastElementChild;
+  oper.insertBefore(lis2, position);
+
+  //clone
+ 
+
+
+  // //replace/
+  // let li = document.createElement("li");
+  // li.textContent = "mai hu billi";
+
+  // let replaceelem = oper.lastElementChild;
+
+  // oper.replaceChild(li, replaceelem);  
+</script>
+
+</body>
+
+</html>

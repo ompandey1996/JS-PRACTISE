@@ -1,0 +1,85 @@
+<!--  everything will becone easy just u need to work on it -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accordian</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    .header {
+      color: white;
+      background-color: black;
+      padding: 5px;
+      text-align: center;
+      border: 1px solid red;
+
+    }
+
+    .accordian-content {
+      text-align: center;
+      color: red;
+      background-color: black;
+      border-bottom: 2px solid purple;
+      padding: 5px 0;
+      display: none;
+      border: 1px dashed white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="accordian-items">
+    <div class="header" onclick="accordopen(this)">
+      <h1> Item1</h1>
+    </div>
+    <div class="accordian-content">
+      <p>Lorem ipsum dolor sit.</p>
+      <p>Lorem ipsum dolor sit.</p>
+      <p>Lorem ipsum dolor sit.</p>
+      <p>Lorem ipsum dolor sit.</p>
+    </div>
+  </div>
+  <div class="accordian-items">
+    <div class="header" onclick="accordopen(this)">
+      <h1> Item2</h1>
+    </div>
+    <div class="accordian-content">
+      <p>Lorem ipsum dolor sit.</p>
+      <p>Lorem ipsum dolor sit.</p>
+      <p>Lorem ipsum dolor sit.</p>
+      <p>Lorem ipsum dolor sit.</p>
+    </div>
+  </div>
+
+  <div class="accordian-items">
+    <div class="header" onclick="accordopen(this)">
+      <h1> Item3</h1>
+    </div>
+    <div class="accordian-content">
+      <p>Lorem ipsum dolor sit.</p>
+      <p>Lorem ipsum dolor sit.</p>
+      <p>Lorem ipsum dolor sit.</p>
+      <p>Lorem ipsum dolor sit.</p>
+    </div>
+  </div>
+  <script>
+    function accordopen(header) {
+      let content = header.nextElementSibling;
+      if (content.style.display === "none") {
+        content.style.display = "block";
+      }
+      else {
+        content.style.display = "none"
+      }
+    }
+  </script>
+</body>
+
+</html>

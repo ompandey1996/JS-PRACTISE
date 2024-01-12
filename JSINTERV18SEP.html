@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS 18 SEPT</title>
+</head>
+
+<body style="background-color:black">
+  <!-- JS INTERVIEW Question -->
+  <script>
+    // capitialize eash word//
+    function capitalize(str) {
+      return str.split(' ')
+        .map(word => word[0].toUpperCase() + word.slice(1))
+        .join(' ');
+    }
+
+
+    console.log(capitalize("ram is"))
+  </script>
+  <!-- function capitalizeFirstLetterOfEachWord(sentence) {
+      let regex = /\b[a-z]/g;  // Match the first letter of each word
+      let capitalizedSentence = sentence.replace(regex, match => match.toUpperCase());
+      return capitalizedSentence;
+    }
+    
+    console.log(capitalizeFirstLetterOfEachWord('ram is')); // Output: Ram Is
+     -->
+  <script>
+    //return  count of argument which has identical values[1,1,1]-3 [1,2,1]-2 [1,2,3]-0
+    function equal(a, b, c) {
+      let count = 0;
+
+      if (a === b && b === c) {
+        count = 3; // All three integers are equal
+      } else if (a === b || b === c || a === c) {
+        count = 2; // Two integers are equal
+      }
+
+      return count;
+    }
+
+    // Examples
+    console.log(equal(3, 4, 3)); // Output: 2
+    console.log(equal(1, 1, 1)); // Output: 3
+    console.log(equal(3, 4, 1)); // Output: 0
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 2 nov js coding</title>
+</head>
+
+<body>
+  <script>
+
+    //     Write a function createCounter. It should accept an initial integer init. It should return an object with three functions.
+
+    // The three functions are:
+
+    // increment() increases the current value by 1 and then returns it.
+    // decrement() reduces the current value by 1 and then returns it.
+    // reset() sets the current value to init and then returns it.
+    function counterval(n) {
+      let obj = {
+        incr: function () {
+          return n + 1
+        },
+
+        decr: function () {
+          return n - 1
+        },
+        reset: function () {
+          return n;
+        }
+      }
+      return obj;
+
+    }
+    let counter = counterval(5)
+    console.log(counter.incr())
+    console.log(counter.decr())
+    console.log(counter.reset())
+  </script>
+  <script>
+    //      Given an integer array arr and a mapping function fn, return a new array with a transformation applied to each element.
+
+    // The returned array should be created such that returnedArray[i] = fn(arr[i], i).
+
+    // Please solve it without the built -in Array.map method.
+    let arr = [1, 2, 3]
+    let formedarray = function (n) {
+      let arr2 = [];
+      for (let i = 0; i < n.length; i++) {
+        n[i] = n[i] + 1;
+        arr2.push(n[i])
+      }
+      return arr2;
+    }
+    console.log(formedarray(arr))
+  </script>
+  <script>
+    function DifferenceInDays(d1, d2) {
+      let date1 = d1.getTime();
+      let date2 = d2.getTime();
+      let difference = date2 - date1;
+      let noofdays = difference / (24 * 60 * 60 * 1000)
+      console.log(noofdays)
+
+    }
+    DifferenceInDays(new Date("2023 2 15"), new Date("2023,11,16"))
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sadanand Pai interview question</title>
+</head>
+
+<body style="background-color: black;">
+  <script>
+    // Write a function which returns true if given value of number is an integer without using any inbuilt functions//
+    function checkintegar(n) {
+      if (n % 1 == 0) {
+        console.log(`${n} is an integar no`)
+      }
+      else {
+        console.log("not a integar no")
+      }
+
+    }
+    checkintegar(12.4)
+
+
+  </script>
+  <script>
+    //return  character between fst and last like  hello //op -ell//
+    function countCharcFromFstToLast(n) {
+      let op = "";
+      for (let i = 1; i < n.length - 1; i++) {
+        op += n[i]
+      }
+      console.log(op)
+
+    }
+    countCharcFromFstToLast("hello")
+  </script>
+
+  <script>
+    //Write a function to truncate a string to a certain number of letters//
+    function truncate(string, num) {
+      let slicepart = "";
+      slicepart = string.slice(num);
+      console.log(slicepart)
+    }
+    truncate("ram", 1) //op am
+  </script>
+
+  <script>
+    //sd pai     
+
+    const regex = /(\+91|91|0)\d{9})/;
+
+    function validateIndianMobileNumber(phoneNumber) {
+      return regex.test(phoneNumber);
+    }
+
+    const phoneNumber = "918210197015";
+
+    const isValid = validateIndianMobileNumber(phoneNumber);
+
+    console.log(isValid); // true
+
+  </script>
+  <script>
+    //Write a JavaScript function to find the common elements in two given arrays.
+    let arr1 = [1, 2, 3, 4, 5, 6];
+    let arr2 = [3, 2, 4, 5];
+    let arr3 = [];
+    for (let i = 0; i < arr1.length; i++) {
+      for (let j = 0; j < arr2.length; j++) {
+        if (arr1[i] == arr2[j]) {
+          arr3.push(arr2[j]);
+
+        }
+
+      }
+    }
+    console.log(arr3)
+  </script>
+
+  <script>
+
+    //Write a JavaScript function to find the difference between two given arrays.
+    function DifferentElementsInArray(a, b) {
+      let newarr = [...a, ...b];
+      let elements = new Set([...newarr])
+      let differingElements = Array.from(elements);
+      console.log(differingElements);
+    }
+    DifferentElementsInArray([1, 2, 3], [3, 4, 5])
+  </script>
+  <script>
+    //pallindrome checker//
+    function pallindrome(str) {
+      let pallindrome = "false"
+      for (let i = 0; i < str.length; i++) {
+        for (j = str.length - 1; j >= 0; j--) {
+          if (str[j] == str[i]) {
+            pallindrome = "true"
+          }
+          else {
+            pallindrome = "false"
+          }
+        }
+      }
+      console.log(pallindrome)
+    }
+    pallindrome("boob")
+  </script>
+</body>
+<script>
+  function x(a) {
+    function y(b) {
+      console.log(a + b + c + d)
+      function z(c) {
+
+      }
+      z(3)
+    }
+    y(2)
+  }
+  x(1) //op  empty space because here under scoping ref err due to undefined var will result emp space
+
+</script>
+<script>
+  //print second smallest no and if array elemets are identical second smallest elements cant be found//
+  function secondsmallest(arr) {
+    let sortedarray;
+    let secondamallestelement = []
+    for (let i = 0; i < arr.length; i++) {
+      for (let j = 0; j < arr.length; j++) {
+        if (arr[i] == arr[j]) {
+          console.log("second smallest elemets cant be found")
+          break;
+        }
+        else {
+          sortedarray = arr.sort(function (a, b) {
+            return a - b;
+          })
+        }
+        // secondamallestelement.push(sortedarray[1])
+      }
+    }
+    secondamallestelement.push(sortedarray[1])
+    return secondamallestelement;
+  }
+  console.log(secondsmallest([4, 6, 8, 2, 99]))
+</script>
+<script>
+  //find frequency of each array element// 
+  function findFrequency(arr) {
+    const uniqueElements = Array.from(new Set(arr)); // Get unique elements from the array
+    const frequency = [];
+
+    uniqueElements.forEach(element => {
+      const count = arr.filter(item => item === element).length;
+      frequency.push(`${element} occurrence ${count} times`);
+    });
+
+
+    return frequency;
+  }
+
+  const array = [1, 1, 2, 4, 3, 5, 7, 3, 2, 2];
+  const frequencyArray = findFrequency(array);
+  console.log(frequencyArray.join('\n'));
+
+</script>
+<script>
+  function chunkArray(array, chunkSize) {
+    const chunkedArray = [];
+
+    for (let i = 0; i < array.length; i += chunkSize) {
+      const chunk = array.slice(i, i + chunkSize);
+      chunkedArray.push(chunk);
+    }
+
+    return chunkedArray;
+  }
+
+  const result = chunkArray([1, 2, 3, 4, 5, 6, 7, 8], 3);
+  console.log(result); // Output: [[1, 2, 3], [4, 5, 6], [7, 8]]
+
+</script>
+<script>
+  //remove duplicates
+  let arr = [1, 1, 1, 1, 2, 3, 4, 5, 3, 2, 3, 5, 6]
+  let arrays2 = arr.filter((value, index) => {
+    return arr.indexOf(value) == index;
+  })
+  console.log(arrays2)
+</script>
+
+</html>

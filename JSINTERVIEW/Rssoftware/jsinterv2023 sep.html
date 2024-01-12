@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color:black;">
+    <script>
+        //  when comparing two char a<b o/p will be true as they are checked by numeric position exception A B character    will have smaller value then samll alphabets //
+        let X = "A" < "B"
+        let Y = "A" > "b"
+        let z="A" > "e"
+        console.log(X);//true
+        console.log(Y);//false
+        console.log(z)//false 
+        console.log(!{}); // false  //  it consider an empty obj true as! given so it will show false
+console.log(!''); //true
+   let count=10;
+       count=!10;
+       counts=!!10;
+       console.log(count)
+       console.log(counts)
+    </script>
+    <script>
+        //    when objext key has space  then quote them.//
+        let address = {
+            'build no': 3960,
+            street: 'North 1st street',
+            state: 'CA',
+            country: 'USA'
+        };
+        console.log(address.state);
+        // ehen console fst property err is  coming//
+    </script>   
+    <script>
+        //call by value call by reference//
+        // value copied  
+        // reference copied
+        let a=5;
+        let b=a;
+        console.log(a) //op 5
+        console.log(b) //op 5
+        b=10;
+          console.log(a);
+          console.log(b);
+           //   call br ref
+           let  obj2={
+            name:"ajay"
+           }
+            let obj1=obj2;
+                 console.log(obj1.name)
+                 console.log(obj2.name)
+                 obj1.name="sujay"
+    console.log(obj1.name)
+      console.log(obj2.name)
+      //   we want object 1 with different name;
+
+
+      obj1={...obj2,name:"rujay"};
+    console.log("the objectq1 value is"+ obj1.name);//rujay
+    console.log("the objectq1 value is"+ obj2.name); //sujay
+     
+    </script>
+    <script>
+        // Array//
+       let array=[1,2,3,4,3,5];
+           let ind=array.lastIndexOf(3);
+           let indi=array.indexOf(3);
+           console.log(ind)
+           console.log(indi)
+    </script>   
+<script>
+      let add="5" + 5;
+        let sub="20" -10;
+        let mult="20"*2;
+        let div="10"/2;
+            console.log(add);
+            console.log(sub);
+            console.log(mult);
+            console.log(div);
+</script>  
+<script>
+    let d=10;
+    let e=20;
+    let f=30;
+      d=e=f;
+      console.log(d)  //   d e f all vale will be 30  
+      console.log(e)   
+      console.log(f)   
+
+</script>
+<script>
+   let price=10;
+ let newprice=++price;
+ console.log(price);
+ console.log(newprice);
+  
+ let amount=100;
+ let newamount=amount++ ;
+ console.log(amount);
+ console.log(newamount);
+
+</script>
+<script>
+    // //Ternary operator//
+       let age=1;
+      let x= age>=25 ?"yes":"no";
+        console.log(x);
+       
+</script>  
+<script>
+   // multiple ternary operator//
+   let speed=90;
+   let res= speed<=100 ? "fast":speed<=90 ? "slow":"hi"     
+        console.log(res)
+</script> 
+<script>
+    let  data=3
+   switch(data){
+      case 0:
+        console.log( " i am zero")
+           break;
+      case 1:
+        console.log(  " i am  1")
+        break;
+        default:"ïnvalid"
+        console.log("ïnvalid")
+        
+      }
+  
+  let xa=10;
+  let y=(xa++,xa+1);
+  console.log(y)
+</script>
+<script>
+  // FUNCTION HOSTING 
+
+//we   can use the function even before declaring it it is called hosting//
+sayHello(); // This works, even though the function is called before its declaration
+
+function sayHello() {
+  console.log("Hello!");
+}
+
+sayHi(); // This will result in an error because sayHi is not defined yet
+
+var sayHi = function() {
+  console.log("Hi!");
+}
+</script> 
+  <script>
+          //   FST CITIZEN WHEN WE CAN USE    function as var value pass as argument in another function and return from another function//
+             function addkaro(a,b){
+              let sum=a+b;
+              return sum;
+
+             };
+             let total=addkaro;   //. Useing function as var //
+             let result =total(5,10);
+                console.log(result);      
+                //  Useing function as arg 
+
+
+                function avg(a,b,fn){
+                  return fn(a,b)/2;
+                }
+                   let   totaldata=avg(20,20,total)
+                   console.log(totaldata);
+  </script>
+  <script>
+    function add1(a){
+      return function(b){
+        return a+b;
+      }
+    }    
+    let add1_container= add1(4);
+      let sec_container=add1_container(5);
+        console.log(sec_container); 
+  </script>
+   
+   <script>
+  // recursive //
+   // when a function call itself //  
+      //print 10,9,8,7,6,5,4,3...
+    function countupto(a){
+      if(a<=0){
+        console.log("terminate")
+      }
+      else{
+        console.log(`${a}`);
+         countupto(a-1);
+      }
+
+    }    
+      countupto(10) ;  
+   </script>
+   <script>
+    //   peint 1-10 without loop //
+
+         function countdown(s)
+         {
+          if(s<=10 ){
+            console.log(`${s}`)
+             countdown(s+1);
+          }
+         }
+         countdown(1)
+   </script>
+   <script>
+   //try catch
+        try{
+          let s=add(5,10)
+        }
+       catch(e){
+        console.log(e);
+       }
+      
+       finally{
+        console.log("error found")
+       }
+ </script>
+ <script>
+ // Arrow key dont have   this keyword binding with it    
+  
+ //WHEN THERE ARE MULTIPLE RETURN STATEMENTS
+ function getUsers() {
+  return [
+    { username: 'john', email: 'john@test.com' },
+    { username: 'jane', email: 'jane@test.com' },
+  ];
+}
+ </script>
+
+ 
+</body>
+
+</html>

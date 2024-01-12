@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+     .colsp{
+        /* background-image: linear-gradient(to left, violet, indigo, green, blue, yellow, orange, red);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent; */
+        background: linear-gradient(red,aqua);
+        color: transparent;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+      
+        background-clip: text;
+
+     
+    }
+    p{
+         position: relative; 
+
+        font-size:3rem;
+    }
+    
+    p::before{
+        position: absolute;
+        Content: "";
+        width: 7vw;
+        display: block;
+        height: 1vh;
+        background-color: blue;
+    }  
+
+    p::after{
+         position: absolute; 
+        display:block;
+        Content: "";
+        width: 7vw;
+        height: 1vh;
+        background-color: purple
+        
+    }
+    .scroll{
+        height:200px;
+        width:200px;
+
+        border: 1px solid red;
+         overflow: scroll;
+    }
+    .scroll::-webkit-scrollbar { display: none; }    
+    /* .a{
+   
+        height:200px;
+        width:200px;
+        border: 1px solid red;
+        background-color: blueviolet;
+        transform: rotate(45deg);
+    } */
+    .b{
+        height:300px;
+        width:200px;
+        border: 1px solid red;
+          position: relative;  
+    }
+    .te{
+        border: 1px solid red;
+        position: absolute;
+        top:50%;
+        left: 50%;
+transform: translate(-50%,-50%);
+    }
+
+   </style>
+</head>
+<body>
+    <p> Pello</p>
+   <p class ="colsp"style="font-size: 3rem;"> TEXT</p>
+   <div class="scroll">    
+Lorem ipsum dolor sit amet consectetur adipisicing elit. In, esse. Totam voluptatibus perspiciatis vitae excepturi reprehenderit autem, repellendus minima suscipit ipsam quod aliquid, ducimus quis cum sint voluptas eos quo!
+   </div>
+   <div class="a">
+
+   </div>
+   <div class="b">
+      <h2 class="te">dsdsdsd</h2>
+   </div>
+   <button> ckicke</button>
+   <script>
+
+   </script>
+   
+</body>
+</html>

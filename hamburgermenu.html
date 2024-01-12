@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>]
+  <style>
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      background-color: orange;
+    }
+
+    .menu {
+      display: flex;
+    }
+
+    .btn {
+      display: none;
+    }
+
+    .item {
+      margin-left: 30px;
+    }
+
+    .menus {
+      text-align: center;
+      background-color: green;
+      /* display: none; */
+      position: absolute;
+      top: 19%;
+      width: 100%;
+      height: 100%
+    }
+
+    @media(max-width:600px) {
+      .btn {
+        display: block;
+      }
+
+      .menu {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="logo">logo</div>
+    <div class="menu">
+      <div class="item">Home</div>
+      <div class="item">About</div>
+      <div class="item">Belive </div>
+    </div>
+    <div class="btn" id=btn onclick="myfun()">
+      <button>ClickMe</button>
+    </div>
+  </div>
+  <div class="menus" id="menustoggle">
+    <div class="menu-items">Home</div>
+    <div class="menu-items">About</div>
+    <div class="menu-items">Contact</div>
+  </div>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, molestiae laudantium? Ipsa harum perspiciatis ullam
+  similique, ab accusantium eos est quam ipsum ducimus doloribus saepe sapiente cupiditate quibusdam tempora error dolor
+  quod voluptas quidem tempore fuga adipisci ipsam. Tenetur voluptatibus consequatur non ut molestiae labore rem qui!
+  Neque voluptatibus repudiandae illo delectus tempore voluptatum itaque ratione distinctio accusamus. Culpa
+  reprehenderit, quos, ducimus repudiandae illum dignissimos odit doloremque ut aliquam voluptatum voluptas deserunt
+  distinctio similique unde laborum libero commodi voluptate consequuntur quam iure sapiente temporibus, eum minima.
+  Sint blanditiis, voluptas, molestiae voluptates placeat laborum fugiat autem molestias quos at, neque voluptatibus?
+  <script>
+    function myfun() {
+      let menustoggle = document.getElementById("menustoggle");
+      if (menustoggle.style.display == "none") {
+        menustoggle.style.display = "block"
+      }
+      else {
+        menustoggle.style.display = "none"
+      }
+
+    }
+
+  </script>
+</body>
+
+</html>
